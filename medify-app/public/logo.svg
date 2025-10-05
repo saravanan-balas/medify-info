@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Medical Cross Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#E0F2FE"/>
+  
+  <!-- Medical Cross -->
+  <rect x="80" y="40" width="40" height="120" rx="8" fill="#0D9488"/>
+  <rect x="40" y="80" width="120" height="40" rx="8" fill="#0D9488"/>
+  
+  <!-- Heart Symbol in Center -->
+  <path d="M100 110C100 110 120 95 120 85C120 78 115 73 108 73C103 73 100 77 100 77C100 77 97 73 92 73C85 73 80 78 80 85C80 95 100 110 100 110Z" fill="#FB7185"/>
+  
+  <!-- Checkmark -->
+  <path d="M85 95L95 105L115 85" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
