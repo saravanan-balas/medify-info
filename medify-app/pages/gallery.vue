@@ -27,11 +27,12 @@
           class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
           @click="selectedImage = image">
           <div class="aspect-video bg-gray-100 p-4">
-            <div class="w-full h-full bg-gray-200 rounded flex items-center justify-center">
-              <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-            </div>
+            <img 
+              :src="image.imageUrl" 
+              :alt="image.title"
+              class="w-full h-full object-cover rounded"
+              @error="handleImageError"
+            />
           </div>
           <div class="p-4">
             <h3 class="font-semibold text-gray-900 mb-1">{{ image.title }}</h3>
@@ -61,11 +62,12 @@
               </button>
             </div>
             <div class="bg-gray-100 rounded-lg p-8">
-              <div class="aspect-video bg-gray-200 rounded flex items-center justify-center">
-                <svg class="w-24 h-24 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                </svg>
-              </div>
+              <img 
+                :src="selectedImage.imageUrl" 
+                :alt="selectedImage.title"
+                class="w-full h-auto rounded"
+                @error="handleImageError"
+              />
             </div>
             <div class="mt-4 p-4 bg-gray-50 rounded">
               <p class="text-sm text-gray-600">
@@ -93,6 +95,7 @@ const images = [
     title: 'The Digestive System',
     description: 'Overview of how your digestive system works',
     category: 'Digestive System',
+    imageUrl: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&crop=center',
     educationalNote: 'The digestive system breaks down food into nutrients your body can absorb. Understanding how it works helps you recognize when something is wrong.'
   },
   {
@@ -100,6 +103,7 @@ const images = [
     title: 'Common Stomach Pain Locations',
     description: 'Where different types of pain occur in the abdomen',
     category: 'Symptoms',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&crop=center',
     educationalNote: 'Different areas of abdominal pain can indicate different conditions. This diagram helps identify where pain is located.'
   },
   {
@@ -107,6 +111,7 @@ const images = [
     title: 'How Acid Reflux Happens',
     description: 'Visual explanation of acid reflux mechanism',
     category: 'Digestive System',
+    imageUrl: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=600&fit=crop&crop=center',
     educationalNote: 'Acid reflux occurs when stomach acid backs up into the esophagus, causing heartburn and discomfort.'
   },
   {
@@ -114,6 +119,7 @@ const images = [
     title: 'Proper Hydration Guide',
     description: 'How much water you should drink daily',
     category: 'Prevention',
+    imageUrl: 'https://images.unsplash.com/photo-1548839140-5d4c2b8a1a8a?w=800&h=600&fit=crop&crop=center',
     educationalNote: 'Staying properly hydrated is essential for digestive health and preventing constipation.'
   },
   {
@@ -121,6 +127,7 @@ const images = [
     title: 'BRAT Diet Foods',
     description: 'Foods to eat when recovering from stomach issues',
     category: 'Treatment',
+    imageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop&crop=center',
     educationalNote: 'The BRAT diet (Bananas, Rice, Applesauce, Toast) helps settle upset stomachs and firm up stools.'
   },
   {
@@ -128,7 +135,56 @@ const images = [
     title: 'Warning Signs to See a Doctor',
     description: 'Symptoms that require medical attention',
     category: 'Symptoms',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba0ef08?w=800&h=600&fit=crop&crop=center',
     educationalNote: 'Certain symptoms indicate serious conditions that need immediate medical evaluation.'
+  },
+  {
+    id: 7,
+    title: 'Constipation Prevention',
+    description: 'Foods and habits that promote regular bowel movements',
+    category: 'Prevention',
+    imageUrl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop&crop=center',
+    educationalNote: 'High-fiber foods, adequate water intake, and regular exercise help prevent constipation.'
+  },
+  {
+    id: 8,
+    title: 'Motion Sickness Prevention',
+    description: 'Tips to prevent travel sickness',
+    category: 'Prevention',
+    imageUrl: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&crop=center',
+    educationalNote: 'Looking at the horizon, avoiding reading, and sitting in the front seat can help prevent motion sickness.'
+  },
+  {
+    id: 9,
+    title: 'Bloating Relief Techniques',
+    description: 'Simple methods to reduce bloating',
+    category: 'Treatment',
+    imageUrl: 'https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&h=600&fit=crop&crop=center',
+    educationalNote: 'Gentle exercise, peppermint tea, and avoiding gas-producing foods can help reduce bloating.'
+  },
+  {
+    id: 10,
+    title: 'Healthy Gut Bacteria',
+    description: 'Foods that promote good digestive health',
+    category: 'Prevention',
+    imageUrl: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop&crop=center',
+    educationalNote: 'Probiotic foods like yogurt and fermented foods help maintain healthy gut bacteria.'
+  },
+  {
+    id: 11,
+    title: 'Stress and Digestion',
+    description: 'How stress affects your digestive system',
+    category: 'Symptoms',
+    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center',
+    educationalNote: 'Stress can cause digestive issues like stomach pain, nausea, and changes in bowel habits.'
+  },
+  {
+    id: 12,
+    title: 'When to Seek Medical Help',
+    description: 'Red flag symptoms that need immediate attention',
+    category: 'Symptoms',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop&crop=center',
+    educationalNote: 'Severe pain, blood in stool, persistent vomiting, or unexplained weight loss require immediate medical evaluation.'
   }
 ]
 
@@ -138,4 +194,9 @@ const filteredImages = computed(() => {
   }
   return images.filter(img => img.category === selectedCategory.value)
 })
+
+// Handle image loading errors
+const handleImageError = (event) => {
+  event.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik04MCA4MEgxMjBWMTIwSDgwVjgwWiIgZmlsbD0iI0QxRTVEQiIvPgo8cGF0aCBkPSJNODUgODVIMTE1VjExNUg4NVY4NVoiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+'
+}
 </script>

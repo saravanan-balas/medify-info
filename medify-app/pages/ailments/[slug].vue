@@ -38,7 +38,7 @@
 
           <!-- Main Content -->
           <div class="content-section">
-            <ContentRenderer v-if="doc" :value="doc" />
+            <div v-if="doc" v-html="doc.body"></div>
           </div>
 
           <!-- Quick Navigation -->

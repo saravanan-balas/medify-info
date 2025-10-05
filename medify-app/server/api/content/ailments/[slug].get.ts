@@ -22,11 +22,20 @@ export default defineEventHandler(async (event) => {
     const yaml = await import('yaml')
     const parsed = yaml.parse(frontmatter)
     
+    // Parse markdown content
+    const { marked } = await import('marked')
+    const parsedBody = marked(body)
+    
     return {
       title: parsed.title,
       description: parsed.description,
-      body: body,
-      _path: `/ailments/${slug}`
+      body: parsedBody,
+      _path: `/ailments/${slug}`,
+      _id: `content:ailments:${slug}.md`,
+      _type: 'markdown',
+      _source: 'content',
+      _file: `ailments/${slug}.md`,
+      _extension: 'md'
     }
   } catch (err) {
     throw createError({ statusCode: 404, statusMessage: 'Content not found' })

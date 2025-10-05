@@ -1,12 +1,26 @@
 <template>
-  <div class="min-h-screen bg-gray-50 py-12">
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50/30 py-12">
     <div class="container-custom">
-      <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-        Common Symptoms Guide
-      </h1>
-      <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-        Click on any symptom card below to learn about the most common related condition, or click individual condition links for specific information.
-      </p>
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl shadow-lg mb-6">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-primary-800 bg-clip-text text-transparent mb-4">
+          Common Symptoms Guide
+        </h1>
+        <p class="text-lg text-gray-600 mb-2 max-w-3xl mx-auto leading-relaxed">
+          Click on any symptom card below to learn about the most common related condition, or click individual condition links for specific information.
+        </p>
+        <div class="flex items-center justify-center space-x-2 text-sm text-primary-600">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>12 symptoms available</span>
+        </div>
+      </div>
       
       <!-- Search Bar -->
       <div class="max-w-2xl mx-auto mb-12">
@@ -15,17 +29,25 @@
             v-model="searchQuery"
             type="text"
             placeholder="Search symptoms (e.g., nausea, pain, bloating)..."
-            class="w-full px-4 py-3 pl-12 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            class="w-full px-6 py-4 pl-14 pr-6 border-2 border-gray-200 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg focus:ring-4 focus:ring-primary-200 focus:border-primary-400 focus:bg-white transition-all duration-300 text-gray-700 placeholder-gray-500"
           />
-          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <svg class="h-6 w-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
+          </div>
+          <!-- Search decorator -->
+          <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+            <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center shadow-sm">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         <div v-if="symptoms.length === 0" class="col-span-full text-center py-12">
           <div class="text-gray-400 text-6xl mb-4">🔍</div>
           <h3 class="text-xl font-semibold text-gray-600 mb-2">No symptoms found</h3>
@@ -36,31 +58,63 @@
           v-for="symptom in symptoms" 
           :key="symptom.name" 
           @click="navigateToFirstCondition(symptom)"
-          class="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer group"
+          class="relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl hover:shadow-primary-100/50 hover:-translate-y-1 transition-all duration-300 cursor-pointer group overflow-hidden"
         >
-          <div class="flex items-center mb-3">
-            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-primary-200 transition-colors">
-              <span class="text-primary-600 text-lg">{{ symptom.icon }}</span>
+          <!-- Background decoration -->
+          <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary-50 to-primary-100 rounded-bl-full opacity-30 group-hover:opacity-50 transition-opacity"></div>
+          
+          <!-- Icon and title section -->
+          <div class="relative flex items-start mb-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg">
+              <span class="text-primary-600 text-2xl">{{ symptom.icon }}</span>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary-700 transition-colors">{{ symptom.name }}</h3>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors leading-tight">{{ symptom.name }}</h3>
+              <div class="w-12 h-1 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mt-2 group-hover:w-16 transition-all duration-300"></div>
+            </div>
           </div>
-          <p class="text-gray-600 mb-4">{{ symptom.description }}</p>
-          <div class="space-y-2">
-            <p class="text-sm font-medium text-gray-700">Related conditions:</p>
+          
+          <!-- Description -->
+          <p class="text-gray-600 mb-5 leading-relaxed">{{ symptom.description }}</p>
+          
+          <!-- Related conditions section -->
+          <div class="space-y-3">
+            <p class="text-sm font-semibold text-gray-800 flex items-center">
+              <svg class="w-4 h-4 mr-1 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Related conditions:
+            </p>
             <div class="flex flex-wrap gap-2">
               <NuxtLink 
                 v-for="condition in symptom.conditions" 
                 :key="condition.slug"
                 :to="`/ailments/${condition.slug}`"
                 @click.stop
-                class="text-sm bg-primary-50 text-primary-700 px-3 py-1 rounded-full hover:bg-primary-100 hover:text-primary-800 transition-colors transform hover:scale-105"
+                class="inline-flex items-center text-sm bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 px-4 py-2 rounded-full hover:from-primary-100 hover:to-primary-200 hover:text-primary-800 hover:shadow-md transition-all duration-200 transform hover:scale-105 border border-primary-200 hover:border-primary-300"
               >
                 {{ condition.name }}
+                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
               </NuxtLink>
             </div>
-            <p class="text-xs text-gray-500 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-              Click card to view {{ symptom.conditions[0]?.name || 'related condition' }}
-            </p>
+            
+            <!-- Hover instruction -->
+            <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+              <p class="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center">
+                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+                Click to view {{ symptom.conditions[0]?.name || 'related condition' }}
+              </p>
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg class="w-5 h-5 text-primary-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
