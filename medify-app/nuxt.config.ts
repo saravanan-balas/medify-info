@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-gtag'
   ],
 
   components: {
@@ -43,5 +44,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
+  },
+
+  gtag: {
+    id: process.env.GOOGLE_ANALYTICS_ID || 'G-9YLW5YHM6B'
   }
 })
