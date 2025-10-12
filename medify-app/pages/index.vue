@@ -31,24 +31,24 @@
       </div>
     </section>
 
-    <!-- Common Ailments Section -->
+    <!-- Body Systems Section -->
     <section class="py-16">
       <div class="container-custom">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-          Common Health Issues
+          Body Systems
         </h2>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Click on any condition below to learn more about symptoms, causes, management, and prevention.
+        <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          Explore different body systems to understand how they work, why they're critical, and learn about common health issues affecting each system.
         </p>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <AilmentCard 
-            v-for="ailment in ailments" 
-            :key="ailment.slug"
-            :title="ailment.title"
-            :description="ailment.description"
-            :slug="ailment.slug"
-            :icon="ailment.icon"
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <SystemCard 
+            v-for="system in bodySystems" 
+            :key="system.slug"
+            :title="system.title"
+            :description="system.description"
+            :slug="system.slug"
+            :icon="system.icon"
           />
         </div>
       </div>
@@ -118,54 +118,48 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const ailments = ref([
+const bodySystems = ref([
   {
-    title: 'Travel Sickness',
-    slug: 'travel-sickness',
-    description: 'Feeling sick during car, boat, or plane journeys',
-    icon: '🚗'
+    title: 'Nervous System',
+    slug: 'nervous-system',
+    description: 'The body\'s communication network that controls everything from breathing to thinking',
+    icon: '🧠'
   },
   {
-    title: 'Constipation',
-    slug: 'constipation',
-    description: 'Difficulty passing stools or infrequent bowel movements',
-    icon: '🚽'
+    title: 'Heart & Cardiovascular System',
+    slug: 'heart',
+    description: 'The powerful pump that keeps blood flowing through your entire body',
+    icon: '❤️'
   },
   {
-    title: 'Belly Pain',
-    slug: 'belly-pain',
-    description: 'Discomfort or pain in the stomach area',
-    icon: '🤕'
+    title: 'Lungs & Respiratory System',
+    slug: 'lungs',
+    description: 'The breathing system that brings oxygen into your body and removes carbon dioxide',
+    icon: '🫁'
   },
   {
-    title: 'Acid Reflux',
-    slug: 'acid-reflux',
-    description: 'Burning sensation in chest or throat from stomach acid',
-    icon: '🔥'
+    title: 'Eyes & Visual System',
+    slug: 'eyes',
+    description: 'Your window to the world - the complex system that allows you to see',
+    icon: '👁️'
   },
   {
-    title: 'Diarrhea',
-    slug: 'diarrhea',
-    description: 'Loose, watery stools occurring more frequently than usual',
-    icon: '💧'
+    title: 'Kidneys & Urinary System',
+    slug: 'kidneys',
+    description: 'The body\'s filtration system that removes waste and maintains fluid balance',
+    icon: '🫘'
   },
   {
-    title: 'Bloating',
-    slug: 'bloating',
-    description: 'Feeling of fullness or swelling in the abdomen',
-    icon: '🎈'
+    title: 'Ears & Hearing System',
+    slug: 'ears',
+    description: 'Your gateway to sound - the complex system that allows you to hear and maintain balance',
+    icon: '👂'
   },
   {
-    title: 'Vomiting',
-    slug: 'vomiting',
-    description: 'Forceful expulsion of stomach contents through the mouth',
-    icon: '🤢'
-  },
-  {
-    title: 'Blood in Poop',
-    slug: 'blood-in-poop',
-    description: 'Presence of blood in stool, which needs medical attention',
-    icon: '🩸'
+    title: 'Digestive System',
+    slug: 'digestive-system',
+    description: 'The body\'s food processing plant that breaks down what you eat into nutrients your body can use',
+    icon: '🍽️'
   }
 ])
 </script>

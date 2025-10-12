@@ -12,13 +12,22 @@
           Common Symptoms Guide
         </h1>
         <p class="text-lg text-gray-600 mb-2 max-w-3xl mx-auto leading-relaxed">
-          Click on any symptom card below to learn about the most common related condition, or click individual condition links for specific information.
+          Click on any symptom card below to learn about the most common related condition, or explore our body systems for comprehensive health information.
         </p>
-        <div class="flex items-center justify-center space-x-2 text-sm text-primary-600">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          <span>12 symptoms available</span>
+        <div class="flex items-center justify-center space-x-4 text-sm text-primary-600">
+          <div class="flex items-center space-x-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>12 symptoms available</span>
+          </div>
+          <div class="w-px h-4 bg-primary-300"></div>
+          <NuxtLink to="/" class="flex items-center space-x-2 hover:text-primary-700 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+            <span>Explore Body Systems</span>
+          </NuxtLink>
         </div>
       </div>
       
@@ -58,7 +67,7 @@
           v-for="symptom in symptoms" 
           :key="symptom.name" 
           @click="navigateToFirstCondition(symptom)"
-          class="relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl hover:shadow-primary-100/50 hover:-translate-y-1 transition-all duration-300 cursor-pointer group overflow-hidden"
+          class="relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-xl hover:shadow-primary-100/50 hover:-translate-y-1 hover:border-primary-300 transition-all duration-300 cursor-pointer group overflow-hidden"
         >
           <!-- Background decoration -->
           <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary-50 to-primary-100 rounded-bl-full opacity-30 group-hover:opacity-50 transition-opacity"></div>

@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/ailments/${slug}`" class="ailment-card group">
+  <NuxtLink :to="`/systems/${slug}`" class="system-card group">
     <div class="text-4xl mb-4">{{ icon }}</div>
     <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
       {{ title }}
@@ -26,7 +26,7 @@ defineProps<Props>()
 </script>
 
 <style scoped>
-.ailment-card {
+.system-card {
   @apply bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200 border border-gray-200 hover:border-primary-300;
 }
 </style>
