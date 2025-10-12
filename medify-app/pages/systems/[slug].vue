@@ -307,6 +307,13 @@ const getConditionSlug = (title: string) => {
     
     // Digestive System
     'Acid Reflux (GERD)': 'acid-reflux',
+    'Belly Pain (Abdominal Pain)': 'belly-pain',
+    'Bloating': 'bloating',
+    'Blood in Poop (Rectal Bleeding)': 'blood-in-poop',
+    'Constipation': 'constipation',
+    'Diarrhea': 'diarrhea',
+    'Travel Sickness (Motion Sickness)': 'travel-sickness',
+    'Vomiting': 'vomiting',
     'Irritable Bowel Syndrome (IBS)': 'ibs',
     'Crohn\'s Disease': 'crohns-disease',
     'Ulcerative Colitis': 'ulcerative-colitis',
@@ -396,6 +403,13 @@ const getConditionIcon = (title: string) => {
     
     // Digestive System
     'Acid Reflux (GERD)': '🤢',
+    'Belly Pain (Abdominal Pain)': '🤕',
+    'Bloating': '💨',
+    'Blood in Poop (Rectal Bleeding)': '🩸',
+    'Constipation': '🚽',
+    'Diarrhea': '💧',
+    'Travel Sickness (Motion Sickness)': '🚗',
+    'Vomiting': '🤮',
     'Irritable Bowel Syndrome (IBS)': '🤢',
     'Crohn\'s Disease': '🤢',
     'Ulcerative Colitis': '🤢',
