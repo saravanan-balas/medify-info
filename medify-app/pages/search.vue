@@ -1,31 +1,75 @@
 <template>
   <div>
     <!-- Search Header -->
-    <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-16">
+    <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-8 md:py-16">
       <div class="container-custom">
-        <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div class="text-center px-4">
+          <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
             Search Medical Content
           </h1>
-          <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 max-w-3xl mx-auto">
             Find information about body systems, health conditions, and medical topics
           </p>
           
-          <!-- Search Bar -->
-          <div class="max-w-2xl mx-auto">
+          <!-- Enhanced Search Bar with Autocomplete -->
+          <div class="max-w-2xl mx-auto relative">
             <div class="relative">
               <input
+                ref="searchInput"
                 v-model="searchQuery"
-                @input="performSearch"
-                @keyup.enter="performSearch"
+                @input="debouncedSearch"
+                @focus="onFocus"
+                @blur="hideSuggestions"
+                @keydown="handleKeyDown"
                 type="text"
                 placeholder="Search for conditions, symptoms, or body systems..."
-                class="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none shadow-sm"
+                class="w-full px-4 md:px-6 py-3 md:py-4 pl-12 pr-12 text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none shadow-sm"
+                autocomplete="off"
               />
-              <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
-                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="absolute left-3 md:left-4 top-1/2 transform -translate-y-1/2">
+                <svg class="w-5 md:w-6 h-5 md:h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
+              </div>
+              <!-- Loading/Search button -->
+              <div class="absolute right-3 md:right-4 top-1/2 transform -translate-y-1/2">
+                <div v-if="isSearching" class="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-600"></div>
+                <button v-else @click="performSearch" class="p-1 hover:bg-gray-100 rounded transition-colors">
+                  <svg class="w-5 md:w-6 h-5 md:h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10m-3 0a3 3 0 106 0 3 3 0 00-6 0M21 21l-6-6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Autocomplete Suggestions -->
+            <div 
+              v-if="showSuggestions && autocompleteSuggestions.length > 0" 
+              class="absolute z-50 w-full mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-80 overflow-y-auto"
+            >
+              <div v-for="category in categorizedSuggestions" :key="category.name" v-show="category.items.length > 0">
+                <div class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider bg-gray-50">
+                  {{ category.label }}
+                </div>
+                <ul>
+                  <li v-for="(item, idx) in category.items" :key="item.id">
+                    <button
+                      type="button"
+                      @mousedown.prevent="selectSuggestion(item)"
+                      @mouseover="selectedIndex = getGlobalIndex(category.name, idx)"
+                      :class="[
+                        'w-full text-left px-4 py-3 hover:bg-primary-50 transition-colors flex items-center',
+                        selectedIndex === getGlobalIndex(category.name, idx) ? 'bg-primary-50' : ''
+                      ]"
+                    >
+                      <span class="text-xl md:text-2xl mr-3 flex-shrink-0">{{ item.icon }}</span>
+                      <div class="flex-grow min-w-0">
+                        <p class="font-medium text-gray-900 text-sm md:text-base" v-html="highlightMatch(item.title)"></p>
+                        <p class="text-xs md:text-sm text-gray-500 truncate">{{ item.description }}</p>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -34,8 +78,8 @@
     </section>
 
     <!-- Search Results -->
-    <section class="py-16">
-      <div class="container-custom">
+    <section class="py-8 md:py-16">
+      <div class="container-custom px-4">
         <!-- Loading State -->
         <div v-if="isSearching" class="text-center py-12">
           <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
@@ -53,10 +97,10 @@
             <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Searches</h3>
             <div class="flex flex-wrap gap-2 justify-center">
               <button
-                v-for="term in popularSearches"
+                v-for="term in popularSearchTerms"
                 :key="term"
                 @click="searchQuery = term; performSearch()"
-                class="px-4 py-2 bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 rounded-full text-sm transition-colors"
+                class="px-3 md:px-4 py-1.5 md:py-2 bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 rounded-full text-xs md:text-sm transition-colors"
               >
                 {{ term }}
               </button>
@@ -73,7 +117,7 @@
             <span class="text-gray-600">{{ searchResults.length }} result{{ searchResults.length !== 1 ? 's' : '' }}</span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div
               v-for="result in searchResults"
               :key="result.id"
@@ -134,12 +178,12 @@
     </section>
 
     <!-- Browse Systems -->
-    <section v-if="!searchQuery" class="py-16 bg-gray-50">
-      <div class="container-custom">
-        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+    <section v-if="!searchQuery" class="py-8 md:py-16 bg-gray-50">
+      <div class="container-custom px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
           Browse Body Systems
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           <NuxtLink
             v-for="system in bodySystems"
             :key="system.slug"
@@ -159,14 +203,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
+import { searchItems, getPopularSearches, getCategoryLabel, type SearchItem } from '~/utils/searchData'
 
 const route = useRoute()
+const router = useRouter()
 
 // Search state
 const searchQuery = ref('')
-const searchResults = ref([])
+const searchResults = ref<SearchItem[]>([])
 const isSearching = ref(false)
+const showSuggestions = ref(false)
+const autocompleteSuggestions = ref<SearchItem[]>([])
+const selectedIndex = ref(-1)
+const searchInput = ref<HTMLInputElement>()
+
+let searchTimer: NodeJS.Timeout
 
 // Body systems for browsing
 const bodySystems = ref([
@@ -215,44 +267,154 @@ const bodySystems = ref([
 ])
 
 // Popular search terms
-const popularSearches = ref([
-  'asthma',
-  'heart disease',
-  'diabetes',
-  'high blood pressure',
-  'depression',
-  'anxiety',
-  'headaches',
-  'sleep problems',
-  'cancer',
-  'stroke'
-])
+const popularSearchTerms = ref(getPopularSearches())
 
-// Search function
-const performSearch = async () => {
+// Group autocomplete suggestions by category
+const categorizedSuggestions = computed(() => {
+  const categories = [
+    { name: 'system', label: 'Body Systems', items: [] as SearchItem[] },
+    { name: 'condition', label: 'Health Conditions', items: [] as SearchItem[] },
+    { name: 'ailment', label: 'Common Issues', items: [] as SearchItem[] },
+    { name: 'symptom', label: 'Symptoms', items: [] as SearchItem[] },
+  ]
+  
+  autocompleteSuggestions.value.forEach(item => {
+    const category = categories.find(c => c.name === item.category)
+    if (category) {
+      category.items.push(item)
+    }
+  })
+  
+  return categories
+})
+
+// Helper functions for autocomplete
+const getGlobalIndex = (categoryName: string, localIndex: number) => {
+  let globalIdx = 0
+  for (const cat of categorizedSuggestions.value) {
+    if (cat.name === categoryName) {
+      return globalIdx + localIndex
+    }
+    globalIdx += cat.items.length
+  }
+  return -1
+}
+
+const getItemByIndex = (index: number) => {
+  let currentIdx = 0
+  for (const cat of categorizedSuggestions.value) {
+    if (currentIdx + cat.items.length > index) {
+      return cat.items[index - currentIdx]
+    }
+    currentIdx += cat.items.length
+  }
+  return null
+}
+
+// Debounced search for autocomplete
+const debouncedSearch = () => {
+  clearTimeout(searchTimer)
+  
+  if (searchQuery.value.length >= 2) {
+    searchTimer = setTimeout(() => {
+      autocompleteSuggestions.value = searchItems(searchQuery.value, 6)
+      showSuggestions.value = true
+    }, 300)
+  } else {
+    autocompleteSuggestions.value = []
+    showSuggestions.value = false
+  }
+}
+
+// Keyboard navigation
+const handleKeyDown = (e: KeyboardEvent) => {
+  const totalItems = autocompleteSuggestions.value.length
+  
+  switch (e.key) {
+    case 'ArrowDown':
+      e.preventDefault()
+      if (totalItems > 0) {
+        selectedIndex.value = (selectedIndex.value + 1) % totalItems
+      }
+      break
+    
+    case 'ArrowUp':
+      e.preventDefault()
+      if (totalItems > 0) {
+        selectedIndex.value = selectedIndex.value <= 0 ? totalItems - 1 : selectedIndex.value - 1
+      }
+      break
+    
+    case 'Enter':
+      e.preventDefault()
+      if (selectedIndex.value >= 0 && selectedIndex.value < totalItems) {
+        const item = getItemByIndex(selectedIndex.value)
+        if (item) {
+          selectSuggestion(item)
+        }
+      } else {
+        performSearch()
+      }
+      break
+    
+    case 'Escape':
+      e.preventDefault()
+      showSuggestions.value = false
+      selectedIndex.value = -1
+      break
+  }
+}
+
+// Select a suggestion
+const selectSuggestion = (item: SearchItem) => {
+  router.push(item.url)
+  searchQuery.value = ''
+  showSuggestions.value = false
+  selectedIndex.value = -1
+}
+
+// Highlight matching text
+const highlightMatch = (text: string) => {
+  if (!searchQuery.value) return text
+  
+  const regex = new RegExp(`(${searchQuery.value})`, 'gi')
+  return text.replace(regex, '<mark class="bg-yellow-200 rounded">$1</mark>')
+}
+
+const onFocus = () => {
+  if (searchQuery.value.length >= 2 && autocompleteSuggestions.value.length > 0) {
+    showSuggestions.value = true
+  }
+}
+
+const hideSuggestions = () => {
+  setTimeout(() => {
+    showSuggestions.value = false
+    selectedIndex.value = -1
+  }, 200)
+}
+
+// Main search function (frontend-based)
+const performSearch = () => {
   if (!searchQuery.value.trim()) {
     searchResults.value = []
     return
   }
 
   isSearching.value = true
+  showSuggestions.value = false
   
-  try {
-    const response = await $fetch('/api/search', {
-      method: 'POST',
-      body: {
-        query: searchQuery.value.trim()
-      }
-    })
-    
-    searchResults.value = response.results || []
-  } catch (error) {
-    console.error('Search error:', error)
-    searchResults.value = []
-  } finally {
+  // Use frontend search
+  setTimeout(() => {
+    searchResults.value = searchItems(searchQuery.value, 50)
     isSearching.value = false
-  }
+  }, 100)
 }
+
+// Reset selected index when suggestions change
+watch(autocompleteSuggestions, () => {
+  selectedIndex.value = -1
+})
 
 // Initialize search from URL query
 onMounted(() => {

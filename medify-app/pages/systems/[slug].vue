@@ -42,8 +42,7 @@
           <div class="flex flex-col md:flex-row items-center justify-center gap-4">
             <div class="text-5xl md:text-6xl">{{ system?.icon }}</div>
             <div class="flex-1">
-              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">{{ system?.title }}</h3>
-              <p class="text-gray-600 mb-4">System Diagram</p>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">{{ system?.title }}</h3>
               <NuxtLink 
                 :to="`/systems/${route.params.slug}-how-it-works`"
                 class="btn-primary inline-flex items-center"
