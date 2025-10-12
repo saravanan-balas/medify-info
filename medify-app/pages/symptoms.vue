@@ -30,31 +30,6 @@
           </NuxtLink>
         </div>
       </div>
-      
-      <!-- Search Bar -->
-      <div class="max-w-2xl mx-auto mb-12">
-        <div class="relative">
-          <input
-            v-model="searchQuery"
-            type="text"
-            placeholder="Search symptoms (e.g., nausea, pain, bloating)..."
-            class="w-full px-6 py-4 pl-14 pr-6 border-2 border-gray-200 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg focus:ring-4 focus:ring-primary-200 focus:border-primary-400 focus:bg-white transition-all duration-300 text-gray-700 placeholder-gray-500"
-          />
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <svg class="h-6 w-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
-          </div>
-          <!-- Search decorator -->
-          <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-            <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center shadow-sm">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         <div v-if="symptoms.length === 0" class="col-span-full text-center py-12">
