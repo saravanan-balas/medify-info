@@ -26,7 +26,7 @@
 
         <div class="hidden md:flex items-center space-x-6">
           <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-          <NuxtLink to="/symptoms" class="nav-link">Symptoms</NuxtLink>
+          <NuxtLink to="/symptoms" class="nav-link">Common Conditions</NuxtLink>
           <NuxtLink to="/interviews" class="nav-link">Interviews</NuxtLink>
           <NuxtLink to="/gallery" class="nav-link">Gallery</NuxtLink>
           <NuxtLink to="/videos" class="nav-link">Videos</NuxtLink>
@@ -144,7 +144,7 @@
       <div v-if="mobileMenuOpen" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 border-t">
           <NuxtLink to="/" class="mobile-nav-link" @click="mobileMenuOpen = false">Home</NuxtLink>
-          <NuxtLink to="/symptoms" class="mobile-nav-link" @click="mobileMenuOpen = false">Symptoms</NuxtLink>
+          <NuxtLink to="/symptoms" class="mobile-nav-link" @click="mobileMenuOpen = false">Common Conditions</NuxtLink>
           <NuxtLink to="/interviews" class="mobile-nav-link" @click="mobileMenuOpen = false">Interviews</NuxtLink>
           <NuxtLink to="/gallery" class="mobile-nav-link" @click="mobileMenuOpen = false">Gallery</NuxtLink>
           <NuxtLink to="/videos" class="mobile-nav-link" @click="mobileMenuOpen = false">Videos</NuxtLink>

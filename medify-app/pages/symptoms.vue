@@ -9,17 +9,17 @@
           </svg>
         </div>
         <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-primary-800 bg-clip-text text-transparent mb-4">
-          Common Symptoms Guide
+          Common Conditions
         </h1>
         <p class="text-lg text-gray-600 mb-2 max-w-3xl mx-auto leading-relaxed">
-          Click on any symptom card below to learn about the most common related condition, or explore our body systems for comprehensive health information.
+          Click on any condition below to learn more about its symptoms, causes, and treatments.
         </p>
         <div class="flex items-center justify-center space-x-4 text-sm text-primary-600">
           <div class="flex items-center space-x-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            <span>12 symptoms available</span>
+            <span>{{ allConditions.length }} conditions available</span>
           </div>
           <div class="w-px h-4 bg-primary-300"></div>
           <NuxtLink to="/" class="flex items-center space-x-2 hover:text-primary-700 transition-colors">
@@ -32,16 +32,16 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        <div v-if="symptoms.length === 0" class="col-span-full text-center py-12">
+        <div v-if="conditions.length === 0" class="col-span-full text-center py-12">
           <div class="text-gray-400 text-6xl mb-4">🔍</div>
-          <h3 class="text-xl font-semibold text-gray-600 mb-2">No symptoms found</h3>
-          <p class="text-gray-500">Try searching with different keywords or browse all symptoms below.</p>
+          <h3 class="text-xl font-semibold text-gray-600 mb-2">No conditions found</h3>
+          <p class="text-gray-500">Try searching with different keywords or browse all conditions below.</p>
         </div>
         
-        <div 
-          v-for="symptom in symptoms" 
-          :key="symptom.name" 
-          @click="navigateToFirstCondition(symptom)"
+        <NuxtLink 
+          v-for="condition in conditions" 
+          :key="condition.slug" 
+          :to="`/conditions/${condition.slug}`"
           class="relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-xl hover:shadow-primary-100/50 hover:-translate-y-1 hover:border-primary-300 transition-all duration-300 cursor-pointer group overflow-hidden"
         >
           <!-- Background decoration -->
@@ -50,57 +50,27 @@
           <!-- Icon and title section -->
           <div class="relative flex items-start mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg">
-              <span class="text-primary-600 text-2xl">{{ symptom.icon }}</span>
+              <span class="text-primary-600 text-2xl">{{ condition.icon }}</span>
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors leading-tight">{{ symptom.name }}</h3>
+              <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors leading-tight">{{ condition.name }}</h3>
               <div class="w-12 h-1 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mt-2 group-hover:w-16 transition-all duration-300"></div>
             </div>
           </div>
           
           <!-- Description -->
-          <p class="text-gray-600 mb-5 leading-relaxed">{{ symptom.description }}</p>
+          <p class="text-gray-600 mb-5 leading-relaxed">{{ condition.description }}</p>
           
-          <!-- Related conditions section -->
-          <div class="space-y-3">
-            <p class="text-sm font-semibold text-gray-800 flex items-center">
-              <svg class="w-4 h-4 mr-1 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <!-- Hover instruction -->
+          <div class="flex items-center justify-end mt-4 pt-3 border-t border-gray-100">
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center text-primary-600">
+              <span class="text-sm mr-2">Learn more</span>
+              <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
-              Related conditions:
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <NuxtLink 
-                v-for="condition in symptom.conditions" 
-                :key="condition.slug"
-                :to="`/ailments/${condition.slug}`"
-                @click.stop
-                class="inline-flex items-center text-sm bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 px-4 py-2 rounded-full hover:from-primary-100 hover:to-primary-200 hover:text-primary-800 hover:shadow-md transition-all duration-200 transform hover:scale-105 border border-primary-200 hover:border-primary-300"
-              >
-                {{ condition.name }}
-                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </NuxtLink>
-            </div>
-            
-            <!-- Hover instruction -->
-            <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
-              <p class="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center">
-                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                </svg>
-                Click to view {{ symptom.conditions[0]?.name || 'related condition' }}
-              </p>
-              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg class="w-5 h-5 text-primary-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -111,143 +81,188 @@ import { ref, computed } from 'vue'
 
 const searchQuery = ref('')
 
-// Function to navigate to the first related condition when card is clicked
-const navigateToFirstCondition = (symptom: any) => {
-  if (symptom.conditions && symptom.conditions.length > 0) {
-    navigateTo(`/ailments/${symptom.conditions[0].slug}`)
-  }
-}
 
-const allSymptoms = [
+const allConditions = [
   {
-    name: 'Nausea',
-    icon: '🤢',
-    description: 'Feeling sick or queasy in your stomach',
-    conditions: [
-      { name: 'Travel Sickness', slug: 'travel-sickness' },
-      { name: 'Vomiting', slug: 'vomiting' },
-      { name: 'Acid Reflux', slug: 'acid-reflux' }
-    ]
-  },
-  {
-    name: 'Stomach Pain',
-    icon: '🤕',
-    description: 'Discomfort or cramping in the abdomen',
-    conditions: [
-      { name: 'Belly Pain', slug: 'belly-pain' },
-      { name: 'Constipation', slug: 'constipation' },
-      { name: 'Bloating', slug: 'bloating' }
-    ]
-  },
-  {
-    name: 'Changes in Bowel Movements',
-    icon: '🚽',
-    description: 'Unusual patterns in toilet habits',
-    conditions: [
-      { name: 'Constipation', slug: 'constipation' },
-      { name: 'Diarrhea', slug: 'diarrhea' },
-      { name: 'Blood in Poop', slug: 'blood-in-poop' }
-    ]
-  },
-  {
-    name: 'Heartburn',
+    name: 'Acid Reflux',
+    slug: 'acid-reflux',
     icon: '🔥',
-    description: 'Burning sensation in chest or throat',
-    conditions: [
-      { name: 'Acid Reflux', slug: 'acid-reflux' },
-      { name: 'Belly Pain', slug: 'belly-pain' }
-    ]
+    description: 'Stomach acid backing up into the esophagus causing heartburn'
+  },
+  {
+    name: 'Anxiety & Stress',
+    slug: 'anxiety-stress',
+    icon: '😰',
+    description: 'Feelings of worry, nervousness, or tension'
+  },
+  {
+    name: 'Asthma',
+    slug: 'asthma',
+    icon: '🫁',
+    description: 'Breathing condition causing wheezing and shortness of breath'
+  },
+  {
+    name: 'Belly Pain',
+    slug: 'belly-pain',
+    icon: '🤕',
+    description: 'Discomfort or pain in the abdominal area'
   },
   {
     name: 'Bloating',
+    slug: 'bloating',
     icon: '🎈',
-    description: 'Feeling full or swollen in the belly',
-    conditions: [
-      { name: 'Bloating', slug: 'bloating' },
-      { name: 'Constipation', slug: 'constipation' },
-      { name: 'Belly Pain', slug: 'belly-pain' }
-    ]
+    description: 'Feeling of fullness or swelling in the abdomen'
   },
   {
-    name: 'Dizziness',
-    icon: '🌀',
-    description: 'Feeling lightheaded or unsteady',
-    conditions: [
-      { name: 'Travel Sickness', slug: 'travel-sickness' },
-      { name: 'Vomiting', slug: 'vomiting' }
-    ]
-  },
-  {
-    name: 'Loss of Appetite',
-    icon: '🍽️',
-    description: 'Not feeling hungry or wanting to eat',
-    conditions: [
-      { name: 'Belly Pain', slug: 'belly-pain' },
-      { name: 'Vomiting', slug: 'vomiting' },
-      { name: 'Constipation', slug: 'constipation' }
-    ]
-  },
-  {
-    name: 'Fatigue',
-    icon: '😴',
-    description: 'Feeling very tired or weak',
-    conditions: [
-      { name: 'Diarrhea', slug: 'diarrhea' },
-      { name: 'Vomiting', slug: 'vomiting' },
-      { name: 'Blood in Poop', slug: 'blood-in-poop' }
-    ]
-  },
-  {
-    name: 'Rectal Bleeding',
+    name: 'Blood in Poop',
+    slug: 'blood-in-poop',
     icon: '🩸',
-    description: 'Blood seen during bowel movements',
-    conditions: [
-      { name: 'Blood in Poop', slug: 'blood-in-poop' },
-      { name: 'Constipation', slug: 'constipation' }
-    ]
+    description: 'Presence of blood in bowel movements'
   },
   {
-    name: 'Chest Pain',
-    icon: '💔',
-    description: 'Discomfort or pain in the chest area',
-    conditions: [
-      { name: 'Acid Reflux', slug: 'acid-reflux' },
-      { name: 'Belly Pain', slug: 'belly-pain' }
-    ]
+    name: 'Bronchitis',
+    slug: 'bronchitis',
+    icon: '😷',
+    description: 'Inflammation of the bronchial tubes causing cough and mucus'
   },
   {
-    name: 'Difficulty Swallowing',
-    icon: '🥤',
-    description: 'Trouble getting food or liquid down',
-    conditions: [
-      { name: 'Acid Reflux', slug: 'acid-reflux' },
-      { name: 'Belly Pain', slug: 'belly-pain' }
-    ]
+    name: 'Cataracts',
+    slug: 'cataracts',
+    icon: '👁️',
+    description: 'Clouding of the eye lens affecting vision'
   },
   {
-    name: 'Excessive Burping',
+    name: 'Common Cold & Flu',
+    slug: 'common-cold-flu',
+    icon: '🤧',
+    description: 'Viral infections affecting the nose, throat, and airways'
+  },
+  {
+    name: 'Constipation',
+    slug: 'constipation',
+    icon: '🚽',
+    description: 'Difficulty passing stools or infrequent bowel movements'
+  },
+  {
+    name: 'COPD',
+    slug: 'copd',
     icon: '💨',
-    description: 'Frequent burping or belching',
-    conditions: [
-      { name: 'Acid Reflux', slug: 'acid-reflux' },
-      { name: 'Bloating', slug: 'bloating' }
-    ]
+    description: 'Chronic lung disease making it hard to breathe'
+  },
+  {
+    name: 'Depression',
+    slug: 'depression',
+    icon: '😔',
+    description: 'Persistent feelings of sadness and loss of interest'
+  },
+  {
+    name: 'Diarrhea',
+    slug: 'diarrhea',
+    icon: '💩',
+    description: 'Loose, watery stools occurring more frequently than usual'
+  },
+  {
+    name: 'Farsightedness',
+    slug: 'hyperopia',
+    icon: '🔭',
+    description: 'Difficulty seeing nearby objects clearly'
+  },
+  {
+    name: 'Glaucoma',
+    slug: 'glaucoma',
+    icon: '👓',
+    description: 'Eye condition damaging the optic nerve'
+  },
+  {
+    name: 'Headaches & Migraines',
+    slug: 'headaches-migraines',
+    icon: '🤯',
+    description: 'Pain in the head ranging from mild to severe'
+  },
+  {
+    name: 'Hearing Loss',
+    slug: 'hearing-loss',
+    icon: '👂',
+    description: 'Partial or complete inability to hear sounds'
+  },
+  {
+    name: 'Heart Disease',
+    slug: 'heart-disease',
+    icon: '💔',
+    description: 'Various conditions affecting heart function and structure'
+  },
+  {
+    name: 'High Blood Pressure',
+    slug: 'hypertension',
+    icon: '❤️',
+    description: 'Elevated blood pressure that can damage blood vessels'
+  },
+  {
+    name: 'Kidney Stones',
+    slug: 'kidney-stones',
+    icon: '🪨',
+    description: 'Hard deposits forming in the kidneys causing severe pain'
+  },
+  {
+    name: 'Memory Issues',
+    slug: 'memory-issues',
+    icon: '🧠',
+    description: 'Difficulty remembering information or forgetfulness'
+  },
+  {
+    name: 'Nearsightedness',
+    slug: 'myopia',
+    icon: '🔍',
+    description: 'Difficulty seeing distant objects clearly'
+  },
+  {
+    name: 'Pneumonia',
+    slug: 'pneumonia',
+    icon: '🩺',
+    description: 'Lung infection causing inflammation and fluid buildup'
+  },
+  {
+    name: 'Sleep Problems',
+    slug: 'sleep-problems',
+    icon: '😴',
+    description: 'Difficulty falling asleep, staying asleep, or poor sleep quality'
+  },
+  {
+    name: 'Tinnitus',
+    slug: 'tinnitus',
+    icon: '🔔',
+    description: 'Ringing or buzzing sounds in the ears'
+  },
+  {
+    name: 'Travel Sickness',
+    slug: 'travel-sickness',
+    icon: '🚗',
+    description: 'Motion sickness during travel by car, plane, boat or train'
+  },
+  {
+    name: 'UTI',
+    slug: 'uti',
+    icon: '🚨',
+    description: 'Urinary tract infection causing pain and frequent urination'
+  },
+  {
+    name: 'Vomiting',
+    slug: 'vomiting',
+    icon: '🤮',
+    description: 'Forcefully expelling stomach contents through the mouth'
   }
 ]
 
-// Filter symptoms based on search query
-const symptoms = computed(() => {
+// Filter conditions based on search query
+const conditions = computed(() => {
   if (!searchQuery.value) {
-    return allSymptoms
+    return allConditions
   }
   
   const query = searchQuery.value.toLowerCase()
-  return allSymptoms.filter(symptom => 
-    symptom.name.toLowerCase().includes(query) ||
-    symptom.description.toLowerCase().includes(query) ||
-    symptom.conditions.some(condition => 
-      condition.name.toLowerCase().includes(query)
-    )
+  return allConditions.filter(condition => 
+    condition.name.toLowerCase().includes(query) ||
+    condition.description.toLowerCase().includes(query)
   )
 })
 </script>

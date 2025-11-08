@@ -82,11 +82,93 @@ export const searchDatabase: SearchItem[] = [
     priority: 10
   },
 
+  // Common Conditions - Digestive
+  {
+    id: 'condition-acid-reflux',
+    title: 'Acid Reflux',
+    description: 'Stomach acid backing up into the esophagus causing heartburn',
+    category: 'condition',
+    icon: '🔥',
+    url: '/conditions/acid-reflux',
+    keywords: ['acid reflux', 'heartburn', 'gerd', 'indigestion', 'acid', 'reflux', 'burning chest'],
+    priority: 8
+  },
+  {
+    id: 'condition-belly-pain',
+    title: 'Belly Pain',
+    description: 'Discomfort or pain in the abdominal area',
+    category: 'condition',
+    icon: '🤕',
+    url: '/conditions/belly-pain',
+    keywords: ['belly pain', 'stomach pain', 'abdominal pain', 'tummy ache', 'stomach ache', 'abdomen'],
+    priority: 8
+  },
+  {
+    id: 'condition-bloating',
+    title: 'Bloating',
+    description: 'Feeling of fullness or swelling in the abdomen',
+    category: 'condition',
+    icon: '🎈',
+    url: '/conditions/bloating',
+    keywords: ['bloating', 'bloated', 'gas', 'swollen belly', 'distension', 'abdominal fullness'],
+    priority: 7
+  },
+  {
+    id: 'condition-blood-in-poop',
+    title: 'Blood in Poop',
+    description: 'Presence of blood in bowel movements',
+    category: 'condition',
+    icon: '🩸',
+    url: '/conditions/blood-in-poop',
+    keywords: ['blood in stool', 'blood in poop', 'rectal bleeding', 'bloody stool', 'hemorrhoids'],
+    priority: 7
+  },
+  {
+    id: 'condition-constipation',
+    title: 'Constipation',
+    description: 'Difficulty passing stools or infrequent bowel movements',
+    category: 'condition',
+    icon: '🚽',
+    url: '/conditions/constipation',
+    keywords: ['constipation', 'constipated', 'bowel', 'can\'t poop', 'blocked', 'hard stool'],
+    priority: 7
+  },
+  {
+    id: 'condition-diarrhea',
+    title: 'Diarrhea',
+    description: 'Loose, watery stools occurring more frequently than usual',
+    category: 'condition',
+    icon: '💩',
+    url: '/conditions/diarrhea',
+    keywords: ['diarrhea', 'loose stools', 'watery stools', 'runny tummy', 'stomach bug'],
+    priority: 7
+  },
+  {
+    id: 'condition-travel-sickness',
+    title: 'Travel Sickness',
+    description: 'Motion sickness during travel by car, plane, boat or train',
+    category: 'condition',
+    icon: '🚗',
+    url: '/conditions/travel-sickness',
+    keywords: ['travel sickness', 'motion sickness', 'car sick', 'sea sick', 'nausea', 'dizzy'],
+    priority: 6
+  },
+  {
+    id: 'condition-vomiting',
+    title: 'Vomiting',
+    description: 'Forcefully expelling stomach contents through the mouth',
+    category: 'condition',
+    icon: '🤮',
+    url: '/conditions/vomiting',
+    keywords: ['vomiting', 'throwing up', 'nausea', 'sick', 'emesis', 'puke'],
+    priority: 7
+  },
+
   // Common Conditions - Respiratory
   {
     id: 'condition-asthma',
     title: 'Asthma',
-    description: 'Breathing difficulties, airway inflammation',
+    description: 'Breathing condition causing wheezing and shortness of breath',
     category: 'condition',
     icon: '🫁',
     url: '/conditions/asthma',
@@ -94,21 +176,41 @@ export const searchDatabase: SearchItem[] = [
     priority: 9
   },
   {
+    id: 'condition-bronchitis',
+    title: 'Bronchitis',
+    description: 'Inflammation of the bronchial tubes causing cough and mucus',
+    category: 'condition',
+    icon: '😷',
+    url: '/conditions/bronchitis',
+    keywords: ['bronchitis', 'cough', 'mucus', 'phlegm', 'chest cold', 'bronchial'],
+    priority: 7
+  },
+  {
+    id: 'condition-common-cold-flu',
+    title: 'Common Cold & Flu',
+    description: 'Viral infections affecting the nose, throat, and airways',
+    category: 'condition',
+    icon: '🤧',
+    url: '/conditions/common-cold-flu',
+    keywords: ['cold', 'flu', 'influenza', 'runny nose', 'sore throat', 'sneezing', 'cough'],
+    priority: 8
+  },
+  {
     id: 'condition-copd',
     title: 'COPD',
-    description: 'Chronic obstructive pulmonary disease',
+    description: 'Chronic lung disease making it hard to breathe',
     category: 'condition',
-    icon: '🫁',
+    icon: '💨',
     url: '/conditions/copd',
-    keywords: ['copd', 'emphysema', 'bronchitis', 'breathing', 'lungs', 'chronic', 'obstructive'],
+    keywords: ['copd', 'emphysema', 'chronic bronchitis', 'breathing', 'lungs', 'chronic', 'obstructive'],
     priority: 8
   },
   {
     id: 'condition-pneumonia',
     title: 'Pneumonia',
-    description: 'Lung infection causing inflammation',
+    description: 'Lung infection causing inflammation and fluid buildup',
     category: 'condition',
-    icon: '🫁',
+    icon: '🩺',
     url: '/conditions/pneumonia',
     keywords: ['pneumonia', 'lung infection', 'chest infection', 'respiratory infection'],
     priority: 8
@@ -208,87 +310,92 @@ export const searchDatabase: SearchItem[] = [
     priority: 7
   },
 
-  // Digestive Ailments
+  // Common Conditions - Eye
   {
-    id: 'ailment-acid-reflux',
-    title: 'Acid Reflux',
-    description: 'Heartburn and acid backup',
-    category: 'ailment',
-    icon: '🤢',
-    url: '/ailments/acid-reflux',
-    keywords: ['acid reflux', 'heartburn', 'gerd', 'indigestion', 'acid', 'reflux'],
-    priority: 8
-  },
-  {
-    id: 'ailment-constipation',
-    title: 'Constipation',
-    description: 'Difficulty passing stools',
-    category: 'ailment',
-    icon: '🚽',
-    url: '/ailments/constipation',
-    keywords: ['constipation', 'constipated', 'bowel', 'can\'t poop', 'blocked'],
+    id: 'condition-cataracts',
+    title: 'Cataracts',
+    description: 'Clouding of the eye lens affecting vision',
+    category: 'condition',
+    icon: '👁️',
+    url: '/conditions/cataracts',
+    keywords: ['cataracts', 'cloudy vision', 'eye lens', 'vision problems', 'blurry vision'],
     priority: 7
   },
   {
-    id: 'ailment-diarrhea',
-    title: 'Diarrhea',
-    description: 'Loose, watery stools',
-    category: 'ailment',
-    icon: '💧',
-    url: '/ailments/diarrhea',
-    keywords: ['diarrhea', 'loose stools', 'watery stools', 'runny tummy', 'stomach bug'],
+    id: 'condition-glaucoma',
+    title: 'Glaucoma',
+    description: 'Eye condition damaging the optic nerve',
+    category: 'condition',
+    icon: '👓',
+    url: '/conditions/glaucoma',
+    keywords: ['glaucoma', 'eye pressure', 'optic nerve', 'vision loss', 'eye disease'],
     priority: 7
   },
   {
-    id: 'ailment-bloating',
-    title: 'Bloating',
-    description: 'Abdominal fullness',
-    category: 'ailment',
-    icon: '🎈',
-    url: '/ailments/bloating',
-    keywords: ['bloating', 'bloated', 'gas', 'swollen belly', 'distension'],
+    id: 'condition-myopia',
+    title: 'Nearsightedness',
+    description: 'Difficulty seeing distant objects clearly',
+    category: 'condition',
+    icon: '🔍',
+    url: '/conditions/myopia',
+    keywords: ['nearsightedness', 'myopia', 'short-sighted', 'can\'t see far', 'distance vision'],
     priority: 6
   },
   {
-    id: 'ailment-vomiting',
-    title: 'Vomiting',
-    description: 'Throwing up',
-    category: 'ailment',
-    icon: '🤢',
-    url: '/ailments/vomiting',
-    keywords: ['vomiting', 'throwing up', 'nausea', 'sick', 'emesis'],
+    id: 'condition-hyperopia',
+    title: 'Farsightedness',
+    description: 'Difficulty seeing nearby objects clearly',
+    category: 'condition',
+    icon: '🔭',
+    url: '/conditions/hyperopia',
+    keywords: ['farsightedness', 'hyperopia', 'long-sighted', 'can\'t see close', 'near vision'],
+    priority: 6
+  },
+
+  // Common Conditions - Ear
+  {
+    id: 'condition-hearing-loss',
+    title: 'Hearing Loss',
+    description: 'Partial or complete inability to hear sounds',
+    category: 'condition',
+    icon: '👂',
+    url: '/conditions/hearing-loss',
+    keywords: ['hearing loss', 'deafness', 'can\'t hear', 'hard of hearing', 'hearing impaired'],
     priority: 7
   },
   {
-    id: 'ailment-belly-pain',
-    title: 'Belly Pain',
-    description: 'Abdominal discomfort',
-    category: 'ailment',
-    icon: '🤕',
-    url: '/ailments/belly-pain',
-    keywords: ['belly pain', 'stomach pain', 'abdominal pain', 'tummy ache', 'stomach ache'],
+    id: 'condition-tinnitus',
+    title: 'Tinnitus',
+    description: 'Ringing or buzzing sounds in the ears',
+    category: 'condition',
+    icon: '🔔',
+    url: '/conditions/tinnitus',
+    keywords: ['tinnitus', 'ringing ears', 'buzzing ears', 'ear noise', 'phantom sounds'],
+    priority: 6
+  },
+
+  // Common Conditions - Urinary
+  {
+    id: 'condition-uti',
+    title: 'UTI',
+    description: 'Urinary tract infection causing pain and frequent urination',
+    category: 'condition',
+    icon: '🚨',
+    url: '/conditions/uti',
+    keywords: ['uti', 'urinary tract infection', 'bladder infection', 'cystitis', 'burning pee'],
     priority: 8
   },
   {
-    id: 'ailment-blood-in-poop',
-    title: 'Blood in Poop',
-    description: 'Blood in stool',
-    category: 'ailment',
-    icon: '🩸',
-    url: '/ailments/blood-in-poop',
-    keywords: ['blood in stool', 'blood in poop', 'rectal bleeding', 'bloody stool'],
-    priority: 6
+    id: 'condition-kidney-stones',
+    title: 'Kidney Stones',
+    description: 'Hard deposits forming in the kidneys causing severe pain',
+    category: 'condition',
+    icon: '🪨',
+    url: '/conditions/kidney-stones',
+    keywords: ['kidney stones', 'renal calculi', 'kidney pain', 'flank pain', 'nephrolithiasis'],
+    priority: 7
   },
-  {
-    id: 'ailment-travel-sickness',
-    title: 'Travel Sickness',
-    description: 'Motion sickness during travel',
-    category: 'ailment',
-    icon: '🚗',
-    url: '/ailments/travel-sickness',
-    keywords: ['travel sickness', 'motion sickness', 'car sick', 'sea sick', 'nausea'],
-    priority: 5
-  },
+
 
   // Common Symptoms
   {
@@ -589,47 +696,75 @@ export function searchItems(query: string, limit: number = 10): SearchItem[] {
   const searchTerm = query.toLowerCase().trim()
   const results: Array<SearchItem & { score: number }> = []
   
-  searchDatabase.forEach(item => {
+  // Filter out ailments - only include systems and conditions
+  const filteredDatabase = searchDatabase.filter(item => 
+    item.category === 'system' || item.category === 'condition'
+  )
+  
+  filteredDatabase.forEach(item => {
     let score = 0
+    let hasExactMatch = false
+    let hasTitleOrKeywordMatch = false
     
-    // Exact title match
+    // Exact title match gets highest priority
     if (item.title.toLowerCase() === searchTerm) {
-      score += 100
+      score += 10000
+      hasExactMatch = true
+      hasTitleOrKeywordMatch = true
     }
-    // Title starts with query
+    // Title starts with query - very high priority
     else if (item.title.toLowerCase().startsWith(searchTerm)) {
-      score += 50
+      score += 5000
+      hasExactMatch = true
+      hasTitleOrKeywordMatch = true
     }
     // Title contains query
     else if (item.title.toLowerCase().includes(searchTerm)) {
-      score += 30
+      score += 1000
+      hasTitleOrKeywordMatch = true
     }
     
-    // Check keywords
+    // Check keywords for exact matches first
     item.keywords.forEach(keyword => {
       if (keyword === searchTerm) {
-        score += 40
+        score += 8000
+        hasExactMatch = true
+        hasTitleOrKeywordMatch = true
       } else if (keyword.startsWith(searchTerm)) {
-        score += 20
+        score += 3000
+        hasExactMatch = true
+        hasTitleOrKeywordMatch = true
       } else if (keyword.includes(searchTerm)) {
-        score += 10
+        score += 500
+        hasTitleOrKeywordMatch = true
       }
     })
     
-    // Check description
-    if (item.description.toLowerCase().includes(searchTerm)) {
-      score += 15
+    // For body systems, require a match in title or keywords (not just description)
+    // This prevents irrelevant systems from appearing at the top
+    if (item.category === 'system' && !hasTitleOrKeywordMatch) {
+      return // Skip this system if it doesn't match title or keywords
     }
     
-    // Add priority bonus
-    score += item.priority
+    // Check description (much lower weight, only for conditions or systems with title/keyword match)
+    if (item.description.toLowerCase().includes(searchTerm)) {
+      score += 50 // Reduced from 100
+    }
+    
+    // Priority bonus - significantly reduced and only for items with matches
+    if (hasExactMatch) {
+      score += item.priority * 2 // Reduced from 5
+    } else if (hasTitleOrKeywordMatch) {
+      score += item.priority * 1 // Reduced from 50, only for items with title/keyword matches
+    }
+    // No priority bonus for description-only matches
     
     if (score > 0) {
       results.push({ ...item, score })
     }
   })
   
-  // Sort by score and return top results
+  // Sort by score (exact matches first) and return top results
   return results
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)

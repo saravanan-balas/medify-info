@@ -36,7 +36,7 @@
           <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
             <li><NuxtLink to="/" class="footer-link">Home</NuxtLink></li>
-            <li><NuxtLink to="/symptoms" class="footer-link">Common Symptoms</NuxtLink></li>
+            <li><NuxtLink to="/symptoms" class="footer-link">Common Conditions</NuxtLink></li>
             <li><NuxtLink to="/interviews" class="footer-link">Doctor Interviews</NuxtLink></li>
             <li><NuxtLink to="/about" class="footer-link">About Us</NuxtLink></li>
           </ul>

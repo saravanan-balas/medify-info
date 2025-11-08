@@ -47,30 +47,26 @@
               v-if="showSuggestions && autocompleteSuggestions.length > 0" 
               class="absolute z-50 w-full mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-80 overflow-y-auto"
             >
-              <div v-for="category in categorizedSuggestions" :key="category.name" v-show="category.items.length > 0">
-                <div class="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider bg-gray-50">
-                  {{ category.label }}
-                </div>
-                <ul>
-                  <li v-for="(item, idx) in category.items" :key="item.id">
-                    <button
-                      type="button"
-                      @mousedown.prevent="selectSuggestion(item)"
-                      @mouseover="selectedIndex = getGlobalIndex(category.name, idx)"
-                      :class="[
-                        'w-full text-left px-4 py-3 hover:bg-primary-50 transition-colors flex items-center',
-                        selectedIndex === getGlobalIndex(category.name, idx) ? 'bg-primary-50' : ''
-                      ]"
-                    >
-                      <span class="text-xl md:text-2xl mr-3 flex-shrink-0">{{ item.icon }}</span>
-                      <div class="flex-grow min-w-0">
-                        <p class="font-medium text-gray-900 text-sm md:text-base" v-html="highlightMatch(item.title)"></p>
-                        <p class="text-xs md:text-sm text-gray-500 truncate">{{ item.description }}</p>
-                      </div>
-                    </button>
-                  </li>
-                </ul>
-              </div>
+              <ul>
+                <li v-for="(item, idx) in autocompleteSuggestions" :key="item.id">
+                  <button
+                    type="button"
+                    @mousedown.prevent="selectSuggestion(item)"
+                    @mouseover="selectedIndex = idx"
+                    :class="[
+                      'w-full text-left px-4 py-3 hover:bg-primary-50 transition-colors flex items-center',
+                      selectedIndex === idx ? 'bg-primary-50' : ''
+                    ]"
+                  >
+                    <span class="text-xl md:text-2xl mr-3 flex-shrink-0">{{ item.icon }}</span>
+                    <div class="flex-grow min-w-0">
+                      <p class="font-medium text-gray-900 text-sm md:text-base" v-html="highlightMatch(item.title)"></p>
+                      <p class="text-xs md:text-sm text-gray-500 truncate">{{ item.description }}</p>
+                      <p class="text-xs text-primary-600 mt-1">{{ getCategoryLabel(item.category) }}</p>
+                    </div>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -126,7 +122,7 @@
               <div class="flex items-start justify-between mb-4">
                 <div class="text-4xl">{{ result.icon }}</div>
                 <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs font-medium">
-                  {{ result.type }}
+                  {{ getCategoryLabel(result.category) }}
                 </span>
               </div>
               
@@ -269,46 +265,9 @@ const bodySystems = ref([
 // Popular search terms
 const popularSearchTerms = ref(getPopularSearches())
 
-// Group autocomplete suggestions by category
-const categorizedSuggestions = computed(() => {
-  const categories = [
-    { name: 'system', label: 'Body Systems', items: [] as SearchItem[] },
-    { name: 'condition', label: 'Health Conditions', items: [] as SearchItem[] },
-    { name: 'ailment', label: 'Common Issues', items: [] as SearchItem[] },
-    { name: 'symptom', label: 'Symptoms', items: [] as SearchItem[] },
-  ]
-  
-  autocompleteSuggestions.value.forEach(item => {
-    const category = categories.find(c => c.name === item.category)
-    if (category) {
-      category.items.push(item)
-    }
-  })
-  
-  return categories
-})
-
-// Helper functions for autocomplete
-const getGlobalIndex = (categoryName: string, localIndex: number) => {
-  let globalIdx = 0
-  for (const cat of categorizedSuggestions.value) {
-    if (cat.name === categoryName) {
-      return globalIdx + localIndex
-    }
-    globalIdx += cat.items.length
-  }
-  return -1
-}
-
+// Helper function to get item by index (simplified)
 const getItemByIndex = (index: number) => {
-  let currentIdx = 0
-  for (const cat of categorizedSuggestions.value) {
-    if (currentIdx + cat.items.length > index) {
-      return cat.items[index - currentIdx]
-    }
-    currentIdx += cat.items.length
-  }
-  return null
+  return autocompleteSuggestions.value[index] || null
 }
 
 // Debounced search for autocomplete
