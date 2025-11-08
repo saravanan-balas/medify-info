@@ -94,6 +94,130 @@
             <h2>Emergency Response</h2>
             <p>When danger appears, your nervous system instantly prepares your body to either fight or run away - your heart beats faster, muscles tense up, and you become super alert.</p>
 
+            <h2>Detailed Anatomy</h2>
+            
+            <h3>Brain Structure</h3>
+            <ul>
+              <li><strong>Cerebrum</strong>: Largest part; two hemispheres (left and right); divided into four lobes:
+                <ul>
+                  <li>Frontal lobe: Motor control, planning, personality, speech (Broca's area)</li>
+                  <li>Parietal lobe: Sensory processing, spatial awareness, touch</li>
+                  <li>Temporal lobe: Hearing, memory (hippocampus), language (Wernicke's area)</li>
+                  <li>Occipital lobe: Vision processing</li>
+                </ul>
+              </li>
+              <li><strong>Cerebellum</strong>: "Little brain"; coordinates movement, balance, posture; contains more neurons than cerebrum</li>
+              <li><strong>Brainstem</strong>: Connects brain to spinal cord; three parts:
+                <ul>
+                  <li>Midbrain: Vision, hearing, motor control</li>
+                  <li>Pons: Breathing, sleep, facial movements</li>
+                  <li>Medulla: Heart rate, blood pressure, breathing, swallowing</li>
+                </ul>
+              </li>
+              <li><strong>Diencephalon</strong>: Contains thalamus (sensory relay) and hypothalamus (hormone control, body temperature, hunger)</li>
+            </ul>
+
+            <h3>Spinal Cord Structure</h3>
+            <ul>
+              <li><strong>Length</strong>: About 18 inches (45 cm); extends from brainstem to L1-L2 vertebrae</li>
+              <li><strong>Regions</strong>: Cervical (neck), Thoracic (chest), Lumbar (lower back), Sacral (pelvis)</li>
+              <li><strong>Gray Matter</strong>: H-shaped center; contains cell bodies, dendrites, synapses; processes information</li>
+              <li><strong>White Matter</strong>: Outer area; contains myelinated axons; forms ascending (sensory) and descending (motor) tracts</li>
+              <li><strong>Spinal Nerves</strong>: 31 pairs; exit between vertebrae; contain both sensory and motor fibers</li>
+            </ul>
+
+            <h3>Neuron Structure</h3>
+            <ul>
+              <li><strong>Cell Body (Soma)</strong>: Contains nucleus and organelles; produces proteins and neurotransmitters</li>
+              <li><strong>Dendrites</strong>: Branch-like extensions; receive signals from other neurons; can have thousands of dendrites</li>
+              <li><strong>Axon</strong>: Long fiber; carries electrical signals away from cell body; can be up to 3 feet long</li>
+              <li><strong>Myelin Sheath</strong>: Fatty covering on axons; speeds up signal transmission; gaps called nodes of Ranvier</li>
+              <li><strong>Axon Terminals</strong>: End of axon; release neurotransmitters into synapse</li>
+              <li><strong>Synapse</strong>: Gap between neurons; where communication occurs</li>
+            </ul>
+
+            <h3>Nerve Types</h3>
+            <ul>
+              <li><strong>Sensory Nerves (Afferent)</strong>: Carry information from body to brain/spinal cord; detect touch, temperature, pain, position</li>
+              <li><strong>Motor Nerves (Efferent)</strong>: Carry commands from brain/spinal cord to muscles/glands; control movement and secretion</li>
+              <li><strong>Mixed Nerves</strong>: Contain both sensory and motor fibers; most spinal nerves are mixed</li>
+              <li><strong>Cranial Nerves</strong>: 12 pairs; emerge from brain; control head/neck functions (vision, hearing, facial movement, etc.)</li>
+            </ul>
+
+            <h3>Protective Structures</h3>
+            <ul>
+              <li><strong>Skull</strong>: Bony protection for brain; 22 bones fused together</li>
+              <li><strong>Vertebral Column</strong>: Bony protection for spinal cord; 33 vertebrae with intervertebral discs</li>
+              <li><strong>Meninges</strong>: Three protective membranes:
+                <ul>
+                  <li>Dura mater: Outer, tough layer</li>
+                  <li>Arachnoid mater: Middle, web-like layer</li>
+                  <li>Pia mater: Inner, delicate layer; follows brain contours</li>
+                </ul>
+              </li>
+              <li><strong>Cerebrospinal Fluid (CSF)</strong>: Clear fluid; cushions brain and spinal cord; produced in ventricles; circulates around CNS</li>
+            </ul>
+
+            <h2>Detailed Physiology</h2>
+            
+            <h3>Neural Transmission (Action Potential)</h3>
+            <ul>
+              <li><strong>Resting Potential</strong>: Neuron at rest; inside negative (-70mV), outside positive; maintained by sodium-potassium pump</li>
+              <li><strong>Depolarization</strong>: Stimulus opens sodium channels; sodium rushes in; inside becomes positive</li>
+              <li><strong>Repolarization</strong>: Potassium channels open; potassium rushes out; inside becomes negative again</li>
+              <li><strong>Refractory Period</strong>: Brief time when neuron can't fire again; ensures one-way signal propagation</li>
+              <li><strong>All-or-None Principle</strong>: Action potential either happens completely or not at all; strength is constant</li>
+              <li><strong>Saltatory Conduction</strong>: In myelinated axons; signal "jumps" between nodes of Ranvier; much faster (up to 120 m/s)</li>
+            </ul>
+
+            <h3>Synaptic Transmission</h3>
+            <ul>
+              <li><strong>Presynaptic Neuron</strong>: Sends signal; action potential reaches axon terminal</li>
+              <li><strong>Calcium Entry</strong>: Voltage-gated calcium channels open; calcium enters terminal</li>
+              <li><strong>Vesicle Fusion</strong>: Synaptic vesicles fuse with membrane; release neurotransmitters</li>
+              <li><strong>Neurotransmitter Release</strong>: Chemicals diffuse across synaptic cleft (20-40 nanometers wide)</li>
+              <li><strong>Receptor Binding</strong>: Neurotransmitters bind to receptors on postsynaptic neuron</li>
+              <li><strong>Postsynaptic Response</strong>: Ion channels open or close; creates excitatory or inhibitory potential</li>
+              <li><strong>Reuptake/Degradation</strong>: Neurotransmitters removed from synapse; recycled or broken down</li>
+            </ul>
+
+            <h3>Neurotransmitters</h3>
+            <ul>
+              <li><strong>Acetylcholine</strong>: Muscle contraction, memory, attention; excitatory or inhibitory depending on receptor</li>
+              <li><strong>Dopamine</strong>: Movement, reward, motivation; involved in Parkinson's and addiction</li>
+              <li><strong>Serotonin</strong>: Mood, sleep, appetite; low levels linked to depression</li>
+              <li><strong>GABA (Gamma-aminobutyric acid)</strong>: Main inhibitory neurotransmitter; reduces neuron activity</li>
+              <li><strong>Glutamate</strong>: Main excitatory neurotransmitter; learning and memory</li>
+              <li><strong>Norepinephrine</strong>: Alertness, arousal, stress response; fight or flight</li>
+            </ul>
+
+            <h3>Reflex Arc</h3>
+            <ul>
+              <li><strong>Sensory Receptor</strong>: Detects stimulus (e.g., hot surface)</li>
+              <li><strong>Sensory Neuron</strong>: Carries signal to spinal cord</li>
+              <li><strong>Integration Center</strong>: Interneuron in spinal cord processes signal</li>
+              <li><strong>Motor Neuron</strong>: Carries command to muscle</li>
+              <li><strong>Effector</strong>: Muscle contracts (e.g., hand pulls away)</li>
+              <li><strong>Characteristics</strong>: Fast (0.1 seconds), automatic, doesn't require brain involvement</li>
+            </ul>
+
+            <h3>Brain Functions</h3>
+            <ul>
+              <li><strong>Memory Formation</strong>: Hippocampus converts short-term to long-term memory; involves synaptic plasticity</li>
+              <li><strong>Language Processing</strong>: Broca's area (speech production), Wernicke's area (language comprehension)</li>
+              <li><strong>Motor Control</strong>: Primary motor cortex plans movements; cerebellum coordinates; basal ganglia smooths</li>
+              <li><strong>Sensory Processing</strong>: Primary sensory areas receive input; association areas interpret and integrate</li>
+              <li><strong>Emotion</strong>: Limbic system (amygdala, hippocampus) processes emotions; connects to cortex for conscious feeling</li>
+            </ul>
+
+            <h3>Autonomic Nervous System</h3>
+            <ul>
+              <li><strong>Sympathetic Division</strong>: "Fight or flight"; increases heart rate, blood pressure, breathing; dilates pupils; decreases digestion</li>
+              <li><strong>Parasympathetic Division</strong>: "Rest and digest"; decreases heart rate, blood pressure; increases digestion; constricts pupils</li>
+              <li><strong>Dual Innervation</strong>: Most organs receive both sympathetic and parasympathetic input; opposite effects</li>
+              <li><strong>Neurotransmitters</strong>: Sympathetic uses norepinephrine; parasympathetic uses acetylcholine</li>
+            </ul>
+
             <h2>Why It's Critical</h2>
             <p>Without your nervous system, you literally couldn't survive. It's the master control system that coordinates everything your body does, from the simplest reflex to the most complex thought.</p>
           </div>

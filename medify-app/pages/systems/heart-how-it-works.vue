@@ -112,6 +112,109 @@
               <li><strong>Stress</strong>: Increases due to adrenaline</li>
             </ul>
 
+            <h2>Detailed Anatomy</h2>
+            
+            <h3>Heart Chambers</h3>
+            <ul>
+              <li><strong>Right Atrium</strong>: Receives deoxygenated blood from superior and inferior vena cava; pumps blood to right ventricle through tricuspid valve</li>
+              <li><strong>Right Ventricle</strong>: Pumps deoxygenated blood to lungs via pulmonary artery; has thinner walls than left ventricle</li>
+              <li><strong>Left Atrium</strong>: Receives oxygenated blood from pulmonary veins; pumps blood to left ventricle through mitral valve</li>
+              <li><strong>Left Ventricle</strong>: Pumps oxygenated blood to entire body via aorta; has thickest muscle walls (3x thicker than right ventricle) to generate high pressure</li>
+            </ul>
+
+            <h3>Heart Valves</h3>
+            <ul>
+              <li><strong>Tricuspid Valve</strong>: Between right atrium and ventricle; prevents backflow of blood</li>
+              <li><strong>Pulmonary Valve</strong>: Between right ventricle and pulmonary artery; opens during ventricular contraction</li>
+              <li><strong>Mitral Valve (Bicuspid)</strong>: Between left atrium and ventricle; prevents backflow to left atrium</li>
+              <li><strong>Aortic Valve</strong>: Between left ventricle and aorta; opens during ventricular contraction to allow blood flow to body</li>
+            </ul>
+
+            <h3>Heart Layers</h3>
+            <ul>
+              <li><strong>Endocardium</strong>: Inner lining of heart chambers and valves; smooth surface prevents blood clotting</li>
+              <li><strong>Myocardium</strong>: Middle layer of cardiac muscle; contracts to pump blood; thickest in left ventricle</li>
+              <li><strong>Epicardium</strong>: Outer layer; also called visceral pericardium; protects heart and contains blood vessels</li>
+              <li><strong>Pericardium</strong>: Protective sac surrounding heart; contains fluid to reduce friction</li>
+            </ul>
+
+            <h3>Coronary Circulation</h3>
+            <ul>
+              <li><strong>Coronary Arteries</strong>: Supply oxygen-rich blood to heart muscle itself; branch from aorta</li>
+              <li><strong>Right Coronary Artery</strong>: Supplies right atrium, right ventricle, and part of left ventricle</li>
+              <li><strong>Left Coronary Artery</strong>: Branches into left anterior descending and circumflex arteries; supplies most of left ventricle</li>
+              <li><strong>Coronary Veins</strong>: Drain deoxygenated blood from heart muscle; empty into right atrium via coronary sinus</li>
+            </ul>
+
+            <h3>Blood Vessel Structure</h3>
+            <ul>
+              <li><strong>Arteries</strong>: Three layers - tunica intima (inner), tunica media (muscle), tunica adventitia (outer); elastic to handle pressure</li>
+              <li><strong>Arterioles</strong>: Small arteries that regulate blood flow; can constrict or dilate to control pressure</li>
+              <li><strong>Capillaries</strong>: Single layer of cells; site of gas and nutrient exchange; smallest blood vessels</li>
+              <li><strong>Venules</strong>: Small veins that collect blood from capillaries</li>
+              <li><strong>Veins</strong>: Thinner walls than arteries; contain valves to prevent backflow; carry blood back to heart</li>
+            </ul>
+
+            <h2>Detailed Physiology</h2>
+            
+            <h3>Cardiac Cycle</h3>
+            <p>The complete heartbeat from one contraction to the next (about 0.8 seconds at rest):</p>
+            <ol>
+              <li><strong>Atrial Systole</strong>: Atria contract, pushing blood into ventricles; lasts about 0.1 seconds</li>
+              <li><strong>Ventricular Systole</strong>: Ventricles contract, pumping blood out; AV valves close (lub sound); lasts about 0.3 seconds</li>
+              <li><strong>Isovolumetric Relaxation</strong>: All valves closed; ventricles relax but don't fill yet; lasts about 0.05 seconds</li>
+              <li><strong>Ventricular Diastole</strong>: Ventricles fill with blood; semilunar valves close (dub sound); lasts about 0.4 seconds</li>
+            </ol>
+
+            <h3>Electrical Conduction System</h3>
+            <p>Specialized cells that generate and conduct electrical impulses:</p>
+            <ol>
+              <li><strong>Sinoatrial (SA) Node</strong>: Natural pacemaker; generates electrical impulses (60-100 per minute); located in right atrium</li>
+              <li><strong>Atrioventricular (AV) Node</strong>: Delays impulse slightly to allow atria to contract first; located between atria and ventricles</li>
+              <li><strong>Bundle of His</strong>: Conducts impulse from AV node to ventricles</li>
+              <li><strong>Bundle Branches</strong>: Left and right branches carry impulse down ventricles</li>
+              <li><strong>Purkinje Fibers</strong>: Spread impulse throughout ventricular muscle; cause coordinated contraction</li>
+            </ol>
+
+            <h3>Hemodynamics (Blood Flow Physics)</h3>
+            <ul>
+              <li><strong>Cardiac Output</strong>: Amount of blood pumped per minute (about 5 liters at rest); equals heart rate × stroke volume</li>
+              <li><strong>Stroke Volume</strong>: Amount of blood pumped per beat (about 70ml at rest)</li>
+              <li><strong>Blood Pressure</strong>: Force exerted by blood on vessel walls; highest in arteries, lowest in veins</li>
+              <li><strong>Resistance</strong>: Opposition to blood flow; affected by vessel diameter, length, and blood viscosity</li>
+              <li><strong>Poiseuille's Law</strong>: Blood flow is proportional to pressure difference and inversely proportional to resistance</li>
+            </ul>
+
+            <h3>Regulation of Heart Function</h3>
+            <ul>
+              <li><strong>Autonomic Nervous System</strong>: 
+                <ul>
+                  <li>Sympathetic: Increases heart rate and contractility (fight or flight)</li>
+                  <li>Parasympathetic: Decreases heart rate (rest and digest)</li>
+                </ul>
+              </li>
+              <li><strong>Hormonal Control</strong>:
+                <ul>
+                  <li>Epinephrine/Norepinephrine: Increase heart rate and contractility</li>
+                  <li>Thyroid hormones: Increase heart rate and cardiac output</li>
+                </ul>
+              </li>
+              <li><strong>Intrinsic Factors</strong>:
+                <ul>
+                  <li>Frank-Starling Law: More blood in ventricle = stronger contraction</li>
+                  <li>Stretch receptors: Detect blood volume changes</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Blood Composition and Function</h3>
+            <ul>
+              <li><strong>Plasma</strong>: Liquid portion (55% of blood); contains water, proteins, nutrients, hormones, waste</li>
+              <li><strong>Red Blood Cells (Erythrocytes)</strong>: Carry oxygen via hemoglobin; 4-6 million per microliter; live about 120 days</li>
+              <li><strong>White Blood Cells (Leukocytes)</strong>: Fight infection; 4,000-11,000 per microliter; several types with different functions</li>
+              <li><strong>Platelets (Thrombocytes)</strong>: Help with blood clotting; 150,000-400,000 per microliter</li>
+            </ul>
+
             <h2>Why It's Critical</h2>
             <p>Without your heart and cardiovascular system, your body wouldn't get the oxygen and nutrients it needs to survive. Every cell in your body depends on this delivery system!</p>
           </div>

@@ -146,6 +146,141 @@
               <li><strong>Eyebrows</strong>: Prevent sweat from dripping into eyes</li>
             </ul>
 
+            <h2>Detailed Anatomy</h2>
+            
+            <h3>Eye Structure (Three Layers)</h3>
+            <ul>
+              <li><strong>Outer Layer (Fibrous Tunic)</strong>:
+                <ul>
+                  <li>Sclera: White, tough outer layer; maintains eye shape; attachment point for muscles</li>
+                  <li>Cornea: Clear, curved front; no blood vessels; refracts light; highly sensitive</li>
+                </ul>
+              </li>
+              <li><strong>Middle Layer (Vascular Tunic/Uvea)</strong>:
+                <ul>
+                  <li>Choroid: Dark, vascular layer; supplies nutrients; absorbs scattered light</li>
+                  <li>Ciliary Body: Produces aqueous humor; contains ciliary muscle (controls lens shape)</li>
+                  <li>Iris: Colored part; controls pupil size; contains radial and circular muscles</li>
+                </ul>
+              </li>
+              <li><strong>Inner Layer (Retina)</strong>:
+                <ul>
+                  <li>Neural layer: Contains photoreceptors (rods and cones)</li>
+                  <li>Pigmented layer: Absorbs light; prevents reflection</li>
+                  <li>Macula: Central area; highest visual acuity</li>
+                  <li>Fovea: Center of macula; only cones; sharpest vision</li>
+                  <li>Optic Disc: Blind spot; where optic nerve exits; no photoreceptors</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Lens and Focusing Structures</h3>
+            <ul>
+              <li><strong>Lens</strong>: Transparent, flexible structure; changes shape for focusing; becomes less flexible with age</li>
+              <li><strong>Ciliary Muscle</strong>: Ring of muscle; contracts to make lens rounder (near vision); relaxes to flatten lens (distant vision)</li>
+              <li><strong>Suspensory Ligaments</strong>: Connect lens to ciliary body; hold lens in place; tension changes lens shape</li>
+              <li><strong>Anterior Chamber</strong>: Space between cornea and iris; filled with aqueous humor</li>
+              <li><strong>Posterior Chamber</strong>: Space between iris and lens; also contains aqueous humor</li>
+              <li><strong>Vitreous Humor</strong>: Gel-like substance filling posterior cavity; maintains eye shape; 99% water</li>
+            </ul>
+
+            <h3>Photoreceptor Cells</h3>
+            <ul>
+              <li><strong>Rods</strong>: ~120 million per eye; sensitive to light (work in dim light); no color vision; concentrated in periphery</li>
+              <li><strong>Cones</strong>: ~6 million per eye; require bright light; detect color; three types (red, green, blue); concentrated in fovea</li>
+              <li><strong>Photopigments</strong>: 
+                <ul>
+                  <li>Rhodopsin: In rods; breaks down in light, regenerates in dark</li>
+                  <li>Photopsins: In cones; three types for different wavelengths</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Accessory Structures</h3>
+            <ul>
+              <li><strong>Eyelids</strong>: Protect eye; spread tears; blink 15-20 times per minute</li>
+              <li><strong>Conjunctiva</strong>: Thin membrane covering sclera and inner eyelids; produces mucus</li>
+              <li><strong>Lacrimal Apparatus</strong>: Produces tears; includes lacrimal gland, ducts, sac, nasolacrimal duct</li>
+              <li><strong>Extraocular Muscles</strong>: Six muscles per eye; control eye movement; allow tracking and convergence</li>
+            </ul>
+
+            <h2>Detailed Physiology</h2>
+            
+            <h3>Light Refraction and Focusing</h3>
+            <ul>
+              <li><strong>Cornea</strong>: Provides 2/3 of eye's focusing power; fixed curvature; refracts light</li>
+              <li><strong>Lens</strong>: Provides remaining 1/3 focusing power; adjustable; changes shape for accommodation</li>
+              <li><strong>Accommodation</strong>: Process of changing lens shape:
+                <ul>
+                  <li>Near vision: Ciliary muscle contracts, suspensory ligaments relax, lens becomes rounder</li>
+                  <li>Distant vision: Ciliary muscle relaxes, suspensory ligaments tighten, lens flattens</li>
+                </ul>
+              </li>
+              <li><strong>Pupil Constriction</strong>: Reduces aberrations; increases depth of field; protects retina in bright light</li>
+            </ul>
+
+            <h3>Phototransduction (Light to Electrical Signal)</h3>
+            <ol>
+              <li><strong>Light Absorption</strong>: Photons hit photopigment (rhodopsin or photopsin)</li>
+              <li><strong>Pigment Breakdown</strong>: Light causes photopigment to change shape (isomerization)</li>
+              <li><strong>Signal Cascade</strong>: Activates G-protein (transducin), which activates phosphodiesterase</li>
+              <li><strong>cGMP Breakdown</strong>: Phosphodiesterase breaks down cGMP</li>
+              <li><strong>Ion Channel Closure</strong>: Less cGMP closes sodium channels</li>
+              <li><strong>Hyperpolarization</strong>: Cell becomes more negative; stops releasing neurotransmitter</li>
+              <li><strong>Signal Transmission</strong>: Bipolar cells, then ganglion cells carry signal to brain</li>
+            </ol>
+
+            <h3>Visual Pathway</h3>
+            <ul>
+              <li><strong>Retina</strong>: Photoreceptors → Bipolar cells → Ganglion cells</li>
+              <li><strong>Optic Nerve</strong>: Axons of ganglion cells; carries signals from eye</li>
+              <li><strong>Optic Chiasm</strong>: Partial crossing; nasal fibers cross, temporal fibers stay on same side</li>
+              <li><strong>Optic Tract</strong>: After chiasm; carries signals to thalamus</li>
+              <li><strong>Lateral Geniculate Nucleus (LGN)</strong>: In thalamus; processes and relays visual information</li>
+              <li><strong>Optic Radiation</strong>: Fibers from LGN to visual cortex</li>
+              <li><strong>Primary Visual Cortex</strong>: In occipital lobe; processes basic visual features</li>
+              <li><strong>Visual Association Areas</strong>: Interpret and integrate visual information</li>
+            </ul>
+
+            <h3>Color Vision</h3>
+            <ul>
+              <li><strong>Trichromatic Theory</strong>: Three types of cones detect different wavelengths:
+                <ul>
+                  <li>Short-wavelength (S) cones: Blue (peak ~420 nm)</li>
+                  <li>Medium-wavelength (M) cones: Green (peak ~530 nm)</li>
+                  <li>Long-wavelength (L) cones: Red (peak ~560 nm)</li>
+                </ul>
+              </li>
+              <li><strong>Color Perception</strong>: Brain compares signals from three cone types; creates all colors</li>
+              <li><strong>Color Blindness</strong>: Missing or defective cone type; most common: red-green color blindness</li>
+            </ul>
+
+            <h3>Dark and Light Adaptation</h3>
+            <ul>
+              <li><strong>Dark Adaptation</strong>: Moving from light to dark:
+                <ul>
+                  <li>Cone adaptation: Fast (~5 minutes)</li>
+                  <li>Rod adaptation: Slow (~30 minutes)</li>
+                  <li>Rhodopsin regenerates; sensitivity increases 100,000x</li>
+                </ul>
+              </li>
+              <li><strong>Light Adaptation</strong>: Moving from dark to light:
+                <ul>
+                  <li>Fast (~5 minutes)</li>
+                  <li>Photopigments break down; sensitivity decreases</li>
+                  <li>Pupil constricts; protects retina</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Depth Perception (Binocular Vision)</h3>
+            <ul>
+              <li><strong>Binocular Disparity</strong>: Each eye sees slightly different image; brain combines for 3D perception</li>
+              <li><strong>Convergence</strong>: Eyes turn inward for near objects; brain uses angle to judge distance</li>
+              <li><strong>Accommodation</strong>: Lens shape changes; brain uses muscle tension to judge distance</li>
+              <li><strong>Monocular Cues</strong>: Relative size, overlap, shadows, perspective (work with one eye)</li>
+            </ul>
+
             <h2>Why It's Critical</h2>
             <p>Your eyes provide 80% of the information your brain receives. They enable you to navigate your environment safely, recognize faces and emotions, and enjoy the beauty of the world around you!</p>
           </div>

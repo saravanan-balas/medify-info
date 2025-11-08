@@ -1,18 +1,18 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-16 md:py-24">
+    <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-8 md:py-12">
       <div class="container-custom">
         <div class="text-center">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Medical Awareness <span class="text-primary-600">Made Simple</span>
           </h1>
-          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-700 mb-6 max-w-3xl mx-auto">
             By students, for students and families. Understanding common health issues in everyday language.
           </p>
           
           <!-- Search Bar -->
-          <div class="max-w-2xl mx-auto mb-8">
+          <div class="max-w-2xl mx-auto mb-6">
             <SearchBar />
           </div>
           

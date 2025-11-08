@@ -166,6 +166,163 @@
               <li>Urine flows out through urethra</li>
             </ol>
 
+            <h2>Detailed Anatomy</h2>
+            
+            <h3>Kidney Structure</h3>
+            <ul>
+              <li><strong>Location</strong>: Behind peritoneum (retroperitoneal); right kidney slightly lower than left (due to liver)</li>
+              <li><strong>Size</strong>: About 4-5 inches long, 2-3 inches wide; bean-shaped; weighs ~150g each</li>
+              <li><strong>Regions</strong>:
+                <ul>
+                  <li>Renal Cortex: Outer layer; contains glomeruli and convoluted tubules</li>
+                  <li>Renal Medulla: Inner region; contains renal pyramids (8-18 per kidney)</li>
+                  <li>Renal Pelvis: Funnel-shaped; collects urine; connects to ureter</li>
+                </ul>
+              </li>
+              <li><strong>Blood Supply</strong>: Renal artery (branches from aorta); ~20% of cardiac output; 1.2 liters per minute</li>
+            </ul>
+
+            <h3>Nephron Structure (Functional Unit)</h3>
+            <p>Each kidney contains ~1 million nephrons:</p>
+            <ul>
+              <li><strong>Renal Corpuscle</strong>:
+                <ul>
+                  <li>Glomerulus: Tuft of capillaries; filters blood; high pressure</li>
+                  <li>Bowman's Capsule: Surrounds glomerulus; collects filtrate; has two layers (parietal and visceral/podocytes)</li>
+                </ul>
+              </li>
+              <li><strong>Renal Tubule</strong>:
+                <ul>
+                  <li>Proximal Convoluted Tubule (PCT): Reabsorbs most water, glucose, amino acids, ions</li>
+                  <li>Loop of Henle: Descending limb (water reabsorption), ascending limb (salt reabsorption); creates concentration gradient</li>
+                  <li>Distal Convoluted Tubule (DCT): Fine-tunes reabsorption; responds to hormones</li>
+                  <li>Collecting Duct: Receives urine from multiple nephrons; final water reabsorption; responds to ADH</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Filtration Membrane</h3>
+            <ul>
+              <li><strong>Three Layers</strong>:
+                <ul>
+                  <li>Fenestrated Endothelium: Capillary wall; has pores (70-100 nm); prevents cells from passing</li>
+                  <li>Basement Membrane: Gel-like layer; prevents large proteins from passing</li>
+                  <li>Podocytes: Visceral layer of Bowman's capsule; foot processes with filtration slits; final barrier</li>
+                </ul>
+              </li>
+              <li><strong>What Passes</strong>: Water, ions, glucose, amino acids, small molecules</li>
+              <li><strong>What Doesn't Pass</strong>: Blood cells, large proteins, platelets</li>
+            </ul>
+
+            <h3>Urinary Tract Structure</h3>
+            <ul>
+              <li><strong>Ureters</strong>: Two tubes (~10-12 inches); peristalsis moves urine; enter bladder at angles (prevents backflow)</li>
+              <li><strong>Bladder</strong>: Hollow, muscular organ; stores urine (300-500ml normal, up to 1 liter); detrusor muscle contracts for urination</li>
+              <li><strong>Urethra</strong>: Tube from bladder to outside; shorter in females (~1.5 inches), longer in males (~8 inches)</li>
+              <li><strong>Sphincters</strong>: Internal (smooth muscle, involuntary) and external (skeletal muscle, voluntary)</li>
+            </ul>
+
+            <h2>Detailed Physiology</h2>
+            
+            <h3>Glomerular Filtration</h3>
+            <ul>
+              <li><strong>Filtration Rate</strong>: ~125 ml/min (180 liters/day); 99% reabsorbed, 1-2 liters excreted as urine</li>
+              <li><strong>Filtration Pressure</strong>: Net filtration pressure = Glomerular hydrostatic pressure - (Capsular pressure + Blood colloid osmotic pressure)</li>
+              <li><strong>Glomerular Hydrostatic Pressure</strong>: ~55 mmHg; main force pushing fluid out</li>
+              <li><strong>Regulation</strong>:
+                <ul>
+                  <li>Autoregulation: Maintains constant GFR despite blood pressure changes</li>
+                  <li>Myogenic mechanism: Smooth muscle responds to pressure</li>
+                  <li>Tubuloglomerular feedback: Macula densa detects flow rate</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Tubular Reabsorption</h3>
+            <ul>
+              <li><strong>Proximal Convoluted Tubule</strong>: Reabsorbs ~65% of filtrate:
+                <ul>
+                  <li>Water: Osmosis (follows solutes)</li>
+                  <li>Glucose: Active transport (100% reabsorbed normally)</li>
+                  <li>Amino acids: Active transport (100% reabsorbed)</li>
+                  <li>Sodium: Active transport (creates gradient for other solutes)</li>
+                  <li>Chloride, bicarbonate, potassium: Various mechanisms</li>
+                </ul>
+              </li>
+              <li><strong>Loop of Henle</strong>: Creates concentration gradient:
+                <ul>
+                  <li>Descending limb: Permeable to water; water leaves by osmosis</li>
+                  <li>Ascending limb: Impermeable to water; actively pumps out salt</li>
+                  <li>Creates medullary concentration gradient (300 mOsm to 1200 mOsm)</li>
+                </ul>
+              </li>
+              <li><strong>Distal Convoluted Tubule</strong>: Fine-tuning; responds to hormones (aldosterone, PTH)</li>
+              <li><strong>Collecting Duct</strong>: Final water reabsorption; responds to ADH (antidiuretic hormone)</li>
+            </ul>
+
+            <h3>Tubular Secretion</h3>
+            <ul>
+              <li><strong>Purpose</strong>: Removes substances from blood; adds to filtrate</li>
+              <li><strong>Substances Secreted</strong>:
+                <ul>
+                  <li>Hydrogen ions (H+): Regulates blood pH</li>
+                  <li>Potassium (K+): Regulates blood potassium levels</li>
+                  <li>Creatinine: Waste product from muscle metabolism</li>
+                  <li>Drugs and toxins: Many medications eliminated this way</li>
+                </ul>
+              </li>
+              <li><strong>Location</strong>: Primarily in proximal and distal convoluted tubules</li>
+            </ul>
+
+            <h3>Hormonal Regulation</h3>
+            <ul>
+              <li><strong>ADH (Antidiuretic Hormone)</strong>:
+                <ul>
+                  <li>Released from posterior pituitary</li>
+                  <li>Stimulated by: High blood osmolarity, low blood volume</li>
+                  <li>Action: Increases water reabsorption in collecting duct</li>
+                  <li>Result: Concentrated urine, less water loss</li>
+                </ul>
+              </li>
+              <li><strong>Aldosterone</strong>:
+                <ul>
+                  <li>Released from adrenal cortex</li>
+                  <li>Stimulated by: Low blood pressure, high potassium</li>
+                  <li>Action: Increases sodium reabsorption (and water follows)</li>
+                  <li>Result: Increases blood volume and pressure</li>
+                </ul>
+              </li>
+              <li><strong>Atrial Natriuretic Peptide (ANP)</strong>:
+                <ul>
+                  <li>Released from heart atria</li>
+                  <li>Stimulated by: High blood volume/pressure</li>
+                  <li>Action: Decreases sodium reabsorption</li>
+                  <li>Result: Increases urine output, decreases blood volume</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Acid-Base Balance</h3>
+            <ul>
+              <li><strong>Blood pH</strong>: Maintained at 7.35-7.45; kidneys help regulate</li>
+              <li><strong>Mechanisms</strong>:
+                <ul>
+                  <li>Bicarbonate reabsorption: Prevents loss of base</li>
+                  <li>Hydrogen ion secretion: Removes acid from blood</li>
+                  <li>Ammonia production: Buffers hydrogen ions</li>
+                  <li>Phosphate buffering: Excretes hydrogen ions</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Micturition (Urination) Reflex</h3>
+            <ul>
+              <li><strong>Bladder Filling</strong>: Stretch receptors detect volume</li>
+              <li><strong>Spinal Reflex</strong>: Signals sent to spinal cord; parasympathetic nerves activated</li>
+              <li><strong>Voluntary Control</strong>: Cerebral cortex can override; external sphincter under conscious control</li>
+              <li><strong>Urination</strong>: Detrusor muscle contracts; sphincters relax; urine expelled</li>
+            </ul>
+
             <h2>Why It's Critical</h2>
             <p>Without your kidneys and urinary system, waste products would build up in your blood, leading to serious illness and death. Your kidneys are essential for maintaining the delicate balance your body needs to function properly!</p>
           </div>

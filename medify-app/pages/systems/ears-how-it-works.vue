@@ -150,6 +150,145 @@
               <li><strong>Music range</strong>: 20 Hz to 20,000 Hz</li>
             </ul>
 
+            <h2>Detailed Anatomy</h2>
+            
+            <h3>Outer Ear Structure</h3>
+            <ul>
+              <li><strong>Pinna (Auricle)</strong>: Visible part; funnels sound into ear canal; helps locate sound source; made of cartilage</li>
+              <li><strong>External Auditory Canal</strong>: ~2.5 cm long; S-shaped; lined with skin and hair; produces cerumen (earwax)</li>
+              <li><strong>Tympanic Membrane (Eardrum)</strong>: Thin membrane (~0.1 mm); separates outer and middle ear; vibrates with sound waves</li>
+            </ul>
+
+            <h3>Middle Ear Structure</h3>
+            <ul>
+              <li><strong>Ossicles (Three Bones)</strong>: Smallest bones in body; amplify sound:
+                <ul>
+                  <li>Malleus (Hammer): Attached to eardrum; first bone</li>
+                  <li>Incus (Anvil): Middle bone; connects malleus to stapes</li>
+                  <li>Stapes (Stirrup): Last bone; footplate fits into oval window</li>
+                </ul>
+              </li>
+              <li><strong>Oval Window</strong>: Opening into inner ear; stapes footplate fits here; transmits vibrations</li>
+              <li><strong>Round Window</strong>: Membrane-covered opening; allows fluid movement in inner ear</li>
+              <li><strong>Eustachian Tube</strong>: Connects middle ear to throat; equalizes pressure; opens during swallowing/yawning</li>
+              <li><strong>Middle Ear Muscles</strong>: Tensor tympani and stapedius; contract to protect from loud sounds</li>
+            </ul>
+
+            <h3>Inner Ear Structure</h3>
+            <ul>
+              <li><strong>Cochlea</strong>: Spiral-shaped, snail-like structure; ~2.5 turns; contains hearing organ</li>
+              <li><strong>Vestibular System</strong>: Three semicircular canals and two otolith organs; balance and spatial orientation</li>
+              <li><strong>Bony Labyrinth</strong>: Bony outer shell; filled with perilymph (similar to cerebrospinal fluid)</li>
+              <li><strong>Membranous Labyrinth</strong>: Inside bony labyrinth; filled with endolymph (high potassium, low sodium)</li>
+            </ul>
+
+            <h3>Cochlear Structure</h3>
+            <ul>
+              <li><strong>Scala Vestibuli</strong>: Upper chamber; filled with perilymph; connected to oval window</li>
+              <li><strong>Scala Media (Cochlear Duct)</strong>: Middle chamber; filled with endolymph; contains organ of Corti</li>
+              <li><strong>Scala Tympani</strong>: Lower chamber; filled with perilymph; connected to round window</li>
+              <li><strong>Basilar Membrane</strong>: Floor of scala media; vibrates with sound; different frequencies vibrate different regions</li>
+              <li><strong>Organ of Corti</strong>: Hearing organ; sits on basilar membrane; contains hair cells</li>
+              <li><strong>Hair Cells</strong>: Sensory receptors; inner hair cells (hearing), outer hair cells (amplification); have stereocilia (hairs)</li>
+              <li><strong>Tectorial Membrane</strong>: Gel-like membrane above hair cells; stereocilia embedded in it</li>
+            </ul>
+
+            <h3>Vestibular System Structure</h3>
+            <ul>
+              <li><strong>Semicircular Canals</strong>: Three canals (anterior, posterior, horizontal); detect rotational movement; each at right angles</li>
+              <li><strong>Ampulla</strong>: Enlarged area at base of each canal; contains crista with hair cells</li>
+              <li><strong>Cupula</strong>: Gel-like structure in ampulla; moves with fluid; bends hair cells</li>
+              <li><strong>Otolith Organs</strong>:
+                <ul>
+                  <li>Utricle: Detects horizontal acceleration and head tilt</li>
+                  <li>Saccule: Detects vertical acceleration</li>
+                </ul>
+              </li>
+              <li><strong>Otoconia</strong>: Calcium carbonate crystals; sit on otolithic membrane; respond to gravity and acceleration</li>
+            </ul>
+
+            <h2>Detailed Physiology</h2>
+            
+            <h3>Sound Transmission</h3>
+            <ol>
+              <li><strong>Sound Waves</strong>: Enter ear canal; strike tympanic membrane</li>
+              <li><strong>Tympanic Membrane</strong>: Vibrates; frequency and amplitude match sound wave</li>
+              <li><strong>Ossicles</strong>: Amplify vibrations (~22x); lever action increases force</li>
+              <li><strong>Oval Window</strong>: Stapes footplate pushes; creates pressure waves in perilymph</li>
+              <li><strong>Cochlear Fluid</strong>: Pressure waves travel through scala vestibuli</li>
+              <li><strong>Basilar Membrane</strong>: Vibrates; different frequencies cause maximum vibration at different locations</li>
+              <li><strong>Round Window</strong>: Bulges outward; allows fluid movement</li>
+            </ol>
+
+            <h3>Frequency Coding (Place Theory)</h3>
+            <ul>
+              <li><strong>Basilar Membrane</strong>: Narrow and stiff at base (high frequencies), wide and flexible at apex (low frequencies)</li>
+              <li><strong>High Frequencies</strong>: Vibrate base of cochlea (near oval window)</li>
+              <li><strong>Low Frequencies</strong>: Vibrate apex of cochlea (far from oval window)</li>
+              <li><strong>Tonotopic Organization</strong>: Different frequencies mapped to different locations; like piano keys</li>
+            </ul>
+
+            <h3>Hair Cell Activation</h3>
+            <ul>
+              <li><strong>Basilar Membrane Movement</strong>: Upward movement pushes organ of Corti toward tectorial membrane</li>
+              <li><strong>Stereocilia Bending</strong>: Hairs bend toward tallest hair; opens ion channels</li>
+              <li><strong>Depolarization</strong>: Potassium (from endolymph) enters cell; cell becomes positive</li>
+              <li><strong>Neurotransmitter Release</strong>: Calcium enters; triggers release of glutamate</li>
+              <li><strong>Nerve Signal</strong>: Spiral ganglion neurons fire; signal travels to brain</li>
+              <li><strong>Outer Hair Cells</strong>: Amplify vibrations; contract and expand; enhance sensitivity</li>
+            </ul>
+
+            <h3>Auditory Pathway</h3>
+            <ul>
+              <li><strong>Cochlear Nerve</strong>: Carries signals from cochlea</li>
+              <li><strong>Cochlear Nucleus</strong>: In brainstem; first processing center</li>
+              <li><strong>Superior Olivary Complex</strong>: Localizes sound; compares input from both ears</li>
+              <li><strong>Inferior Colliculus</strong>: In midbrain; integrates auditory information</li>
+              <li><strong>Medial Geniculate Nucleus</strong>: In thalamus; relays to cortex</li>
+              <li><strong>Primary Auditory Cortex</strong>: In temporal lobe; processes sound features</li>
+              <li><strong>Auditory Association Areas</strong>: Interpret meaning of sounds</li>
+            </ul>
+
+            <h3>Balance and Equilibrium</h3>
+            <ul>
+              <li><strong>Semicircular Canals</strong>: Detect rotational acceleration:
+                <ul>
+                  <li>Head rotation causes endolymph to lag behind</li>
+                  <li>Cupula bends; hair cells activated</li>
+                  <li>Brain detects direction and speed of rotation</li>
+                </ul>
+              </li>
+              <li><strong>Otolith Organs</strong>: Detect linear acceleration and gravity:
+                <ul>
+                  <li>Head tilt or acceleration moves otoconia</li>
+                  <li>Otolithic membrane shifts; bends hair cells</li>
+                  <li>Brain detects head position and movement</li>
+                </ul>
+              </li>
+              <li><strong>Vestibular Reflexes</strong>:
+                <ul>
+                  <li>Vestibulo-ocular reflex: Keeps eyes fixed during head movement</li>
+                  <li>Vestibulospinal reflex: Adjusts posture and balance</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Sound Intensity Coding</h3>
+            <ul>
+              <li><strong>Loud Sounds</strong>: Larger basilar membrane vibrations; more hair cells activated; higher firing rate</li>
+              <li><strong>Soft Sounds</strong>: Smaller vibrations; fewer hair cells; lower firing rate</li>
+              <li><strong>Dynamic Range</strong>: Ears can detect sounds from 0 dB (threshold) to 120+ dB (pain); 1 trillion-fold range</li>
+              <li><strong>Protective Mechanisms</strong>: Middle ear muscles contract; reduces sound transmission; protects inner ear</li>
+            </ul>
+
+            <h3>Hearing Range</h3>
+            <ul>
+              <li><strong>Frequency Range</strong>: 20 Hz to 20,000 Hz (20 kHz) in young adults; decreases with age</li>
+              <li><strong>Most Sensitive</strong>: 1,000-4,000 Hz (speech range)</li>
+              <li><strong>Infrasound</strong>: Below 20 Hz; felt rather than heard</li>
+              <li><strong>Ultrasound</strong>: Above 20,000 Hz; humans can't hear; used by bats and dolphins</li>
+            </ul>
+
             <h2>Why It's Critical</h2>
             <p>Your ears enable communication through speech and language, provide awareness of your environment and safety, allow you to enjoy music and nature sounds, and help you maintain balance and spatial orientation!</p>
           </div>
