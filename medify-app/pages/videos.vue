@@ -5,12 +5,12 @@
         Video Library
       </h1>
       <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-        Educational videos from medical professionals explaining digestive health topics in simple, easy-to-understand ways. Perfect for students and families.
+        Educational videos from medical professionals explaining health topics and body systems in simple, easy-to-understand ways. Perfect for students and families.
       </p>
       
       <div class="max-w-3xl mx-auto mb-12 bg-green-50 border border-green-200 rounded-lg p-4">
         <p class="text-sm text-green-800">
-          <strong>Educational Content:</strong> All videos are from reputable sources including TED-Ed, medical educators, and professional medical animation channels. Perfect for learning about digestive health!
+          <strong>Educational Content:</strong> All videos are from reputable sources including TED-Ed, medical educators, and professional medical animation channels. Perfect for learning about health and body systems!
         </p>
       </div>
 
@@ -55,73 +55,29 @@
         </div>
       </div>
 
-      <!-- Featured Doctor Interviews Section -->
-      <div class="mt-12 bg-white rounded-lg shadow-sm p-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Doctor Interviews</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Sarah Johnson - Gastroenterologist</h3>
-            <p class="text-gray-600 mb-4">Specialist in digestive health with 15+ years of experience</p>
-            <div class="space-y-2">
-              <div class="flex items-center text-sm">
-                <span class="text-primary-600 mr-2">Topic:</span>
-                <span class="text-gray-700">Understanding Acid Reflux and GERD</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-primary-600 mr-2">Focus:</span>
-                <span class="text-gray-700">When to seek medical help for digestive symptoms</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-primary-600 mr-2">Expertise:</span>
-                <span class="text-gray-700">Pediatric and Adult Gastroenterology</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Dr. Michael Chen - Family Medicine</h3>
-            <p class="text-gray-600 mb-4">Primary care physician specializing in preventive health</p>
-            <div class="space-y-2">
-              <div class="flex items-center text-sm">
-                <span class="text-secondary-500 mr-2">Topic:</span>
-                <span class="text-gray-700">Preventing Common Digestive Issues</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-secondary-500 mr-2">Focus:</span>
-                <span class="text-gray-700">Lifestyle changes for better digestive health</span>
-              </div>
-              <div class="flex items-center text-sm">
-                <span class="text-secondary-500 mr-2">Expertise:</span>
-                <span class="text-gray-700">Family Medicine and Preventive Care</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Quick Reference Section -->
       <div class="mt-8 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-6">
         <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Video Reference</h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <div class="text-center">
-            <div class="text-2xl mb-2">🔥</div>
-            <div class="font-medium text-gray-700">Acid Reflux</div>
-            <div class="text-xs text-gray-500">Videos 4, 8</div>
+            <div class="text-2xl mb-2">🍽️</div>
+            <div class="font-medium text-gray-700">Digestive System</div>
+            <div class="text-xs text-gray-500">Videos 1, 5</div>
           </div>
           <div class="text-center">
-            <div class="text-2xl mb-2">🚽</div>
-            <div class="font-medium text-gray-700">Constipation</div>
-            <div class="text-xs text-gray-500">Video 5</div>
+            <div class="text-2xl mb-2">❤️</div>
+            <div class="font-medium text-gray-700">Heart Health</div>
+            <div class="text-xs text-gray-500">Videos 6-7</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl mb-2">🫁</div>
+            <div class="font-medium text-gray-700">Lungs & Breathing</div>
+            <div class="text-xs text-gray-500">Videos 9, 11</div>
           </div>
           <div class="text-center">
             <div class="text-2xl mb-2">🧠</div>
-            <div class="font-medium text-gray-700">Stress & Gut</div>
-            <div class="text-xs text-gray-500">Video 7</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl mb-2">🦠</div>
-            <div class="font-medium text-gray-700">Gut Bacteria</div>
-            <div class="text-xs text-gray-500">Videos 2, 11</div>
+            <div class="font-medium text-gray-700">Brain & Nervous</div>
+            <div class="text-xs text-gray-500">Videos 12-14</div>
           </div>
         </div>
       </div>
@@ -137,6 +93,7 @@ const selectedCategory = ref('All')
 const categories = ['All', 'Explanations', 'How-To', 'Prevention', 'Animations']
 
 const videos = [
+  // Digestive System Videos
   {
     id: 1,
     title: 'How your digestive system works',
@@ -149,126 +106,119 @@ const videos = [
     doctor: 'TED-Ed Educational Animation'
   },
   {
-    id: 2,
-    title: 'The surprisingly charming science of your gut',
-    description: 'Giulia Enders explores the fascinating world of gut bacteria and digestive health',
-    category: 'Explanations',
-    duration: '14:19',
-    views: '3.1M',
-    level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/YSWJa42jzqU',
-    doctor: 'Giulia Enders, Microbiologist'
-  },
-  {
-    id: 3,
-    title: 'How the food you eat affects your gut',
-    description: 'Dr. Shilpa Ravella explains the gut microbiome and how diet impacts digestive health',
-    category: 'Explanations',
-    duration: '4:42',
-    views: '2.8M',
-    level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/Z8nOiAEn_Co',
-    doctor: 'Dr. Shilpa Ravella, Gastroenterologist'
-  },
-  {
-    id: 4,
-    title: 'Acid Reflux (GERD) - Medical Animation',
-    description: 'Professional medical animation explaining gastroesophageal reflux disease causes and symptoms',
-    category: 'Animations',
-    duration: '3:16',
-    views: '890K',
-    level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/rF5PW_8XNwc',
-    doctor: 'Alila Medical Media'
-  },
-  {
     id: 5,
-    title: 'Understanding Constipation',
-    description: 'Medical explanation of constipation causes, symptoms, and treatment options',
-    category: 'Explanations',
-    duration: '6:12',
-    views: '456K',
-    level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/QANOGCAyyhY',
-    doctor: 'Medical Educational Content'
-  },
-  {
-    id: 6,
-    title: 'The Digestive System',
+    title: 'The Digestive System - Crash Course',
     description: 'Comprehensive overview of digestive system anatomy and function for students',
     category: 'Animations',
-    duration: '8:45',
+    duration: '11:53',
     views: '2.1M',
-    level: 'Kids',
-    embedUrl: 'https://www.youtube.com/embed/Clul0AHnQnM',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/s06XzaKqELk',
     doctor: 'Crash Course Biology'
   },
+  // Heart & Cardiovascular Videos
   {
-    id: 7,
-    title: 'How Stress Affects Your Digestive System',
-    description: 'Scientific explanation of the gut-brain connection and stress impact on digestion',
-    category: 'Explanations',
-    duration: '5:28',
-    views: '745K',
-    level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/rJ79L2bMJ5M',
-    doctor: 'SciShow Educational'
-  },
-  {
-    id: 8,
-    title: 'What causes heartburn?',
-    description: 'TED-Ed explains the science behind heartburn and acid reflux symptoms',
-    category: 'Explanations',
-    duration: '4:17',
-    views: '1.8M',
-    level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/BYBz-Yb6bNg',
-    doctor: 'TED-Ed Educational Animation'
-  },
-  {
-    id: 9,
-    title: 'Inflammatory Bowel Disease Explained',
-    description: 'Medical animation explaining Crohn\'s disease and ulcerative colitis differences',
+    id: 6,
+    title: 'How Your Heart Works - Medical Animation',
+    description: 'Detailed animation explaining heart anatomy, blood flow, and cardiovascular function',
     category: 'Animations',
-    duration: '7:33',
-    views: '623K',
-    level: 'Important',
-    embedUrl: 'https://www.youtube.com/embed/w-OQWTHPfgM',
-    doctor: 'Osmosis Medical Education'
-  },
-  {
-    id: 10,
-    title: 'The Science of Stomach Acid',
-    description: 'Educational video explaining how stomach acid works and its importance in digestion',
-    category: 'Explanations',
-    duration: '6:45',
-    views: '892K',
+    duration: '3:45',
+    views: '4.5M',
     level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/OgwfSQKbLy8',
+    embedUrl: 'https://www.youtube.com/embed/7XaftdE_h60',
     doctor: 'Nucleus Medical Media'
   },
   {
-    id: 11,
-    title: 'Healthy Gut Bacteria and You',
-    description: 'Learn about the importance of gut microbiome for overall health and immunity',
-    category: 'Prevention',
-    duration: '5:51',
-    views: '1.3M',
+    id: 7,
+    title: 'How Blood Flows Through the Heart',
+    description: 'TED-Ed animation explaining the cardiac cycle and blood circulation',
+    category: 'Animations',
+    duration: '4:28',
+    views: '3.2M',
     level: 'Beginner',
-    embedUrl: 'https://www.youtube.com/embed/7fhjPVGy1EU',
-    doctor: 'American Gut Project'
+    embedUrl: 'https://www.youtube.com/embed/CWFyxn0qDEU',
+    doctor: 'TED-Ed Educational Animation'
+  },
+  // Respiratory System Videos
+  {
+    id: 9,
+    title: 'How Your Lungs Work',
+    description: 'TED-Ed animation explaining the respiratory system and how breathing works',
+    category: 'Animations',
+    duration: '3:52',
+    views: '3.8M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/8NUxvJS-_0k',
+    doctor: 'TED-Ed Educational Animation'
   },
   {
+    id: 11,
+    title: 'Understanding Asthma',
+    description: 'Medical explanation of asthma causes, symptoms, and management',
+    category: 'Explanations',
+    duration: '4:12',
+    views: '1.1M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/PzfLDi-sL3w',
+    doctor: 'American Lung Association'
+  },
+  // Nervous System Videos
+  {
     id: 12,
-    title: 'When to See a Doctor for Digestive Issues',
-    description: 'Medical guidelines for recognizing serious digestive symptoms requiring medical attention',
-    category: 'How-To',
-    duration: '8:22',
-    views: '534K',
-    level: 'Important',
-    embedUrl: 'https://www.youtube.com/embed/VsM8wZhZoaI',
-    doctor: 'Medical Educational Content'
-  }
+    title: 'How Your Brain Works',
+    description: 'Crash Course explains the nervous system and brain function in simple terms',
+    category: 'Explanations',
+    duration: '10:08',
+    views: '5.2M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/vHrmiy4W9C0',
+    doctor: 'Crash Course Psychology'
+  },
+  {
+    id: 13,
+    title: 'The Nervous System - Crash Course',
+    description: 'Comprehensive overview of the nervous system anatomy and function',
+    category: 'Animations',
+    duration: '10:36',
+    views: '3.9M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/qPix_X-9t7E',
+    doctor: 'Crash Course Anatomy & Physiology'
+  },
+  {
+    id: 14,
+    title: 'Understanding Anxiety and Stress',
+    description: 'Medical explanation of how anxiety affects the body and mind',
+    category: 'Explanations',
+    duration: '5:33',
+    views: '2.3M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/WWloIAQpMcQ',
+    doctor: 'TED-Ed Educational Animation'
+  },
+  // Kidney & Urinary System Videos
+  {
+    id: 15,
+    title: 'How Your Kidneys Work',
+    description: 'Medical animation explaining kidney function, filtration, and waste removal',
+    category: 'Animations',
+    duration: '3:55',
+    views: '2.1M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/FN3MFhYPWWo',
+    doctor: 'Nucleus Medical Media'
+  },
+  {
+    id: 16,
+    title: 'The Urinary System - Crash Course',
+    description: 'Educational overview of the urinary system and kidney function',
+    category: 'Animations',
+    duration: '10:18',
+    views: '1.8M',
+    level: 'Beginner',
+    embedUrl: 'https://www.youtube.com/embed/l128tW1H5a8',
+    doctor: 'Crash Course Anatomy & Physiology'
+  },
 ]
 
 const filteredVideos = computed(() => {

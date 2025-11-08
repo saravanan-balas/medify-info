@@ -47,8 +47,8 @@
               v-if="showSuggestions && autocompleteSuggestions.length > 0" 
               class="absolute z-50 w-full mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-80 overflow-y-auto"
             >
-              <ul>
-                <li v-for="(item, idx) in autocompleteSuggestions" :key="item.id">
+              <ul class="list-none p-0 m-0">
+                <li v-for="(item, idx) in autocompleteSuggestions" :key="item.id" class="list-none">
                   <button
                     type="button"
                     @mousedown.prevent="selectSuggestion(item)"
