@@ -100,7 +100,7 @@
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center bg-gradient-to-br from-primary-50 to-white rounded-xl p-8 hover:shadow-lg transition-shadow overflow-hidden relative">
+          <div class="text-center bg-gradient-to-br from-primary-50 via-primary-100/50 to-white rounded-xl p-8 hover:shadow-lg transition-shadow overflow-hidden relative border border-primary-100">
             <div class="absolute top-0 right-0 w-32 h-32 bg-primary-200 rounded-full -mr-16 -mt-16 opacity-30"></div>
             <div class="relative">
               <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 relative">
@@ -114,7 +114,7 @@
             </div>
           </div>
           
-          <div class="text-center bg-gradient-to-br from-secondary-50 to-white rounded-xl p-8 hover:shadow-lg transition-shadow overflow-hidden relative">
+          <div class="text-center bg-gradient-to-br from-secondary-50 via-secondary-100/50 to-white rounded-xl p-8 hover:shadow-lg transition-shadow overflow-hidden relative border border-secondary-100">
             <div class="absolute top-0 right-0 w-32 h-32 bg-secondary-200 rounded-full -mr-16 -mt-16 opacity-30"></div>
             <div class="relative">
               <div class="w-20 h-20 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4 relative">
@@ -132,7 +132,7 @@
             </div>
           </div>
           
-          <div class="text-center bg-gradient-to-br from-primary-50 to-white rounded-xl p-8 hover:shadow-lg transition-shadow overflow-hidden relative">
+          <div class="text-center bg-gradient-to-br from-primary-50 via-primary-100/50 to-white rounded-xl p-8 hover:shadow-lg transition-shadow overflow-hidden relative border border-primary-100">
             <div class="absolute top-0 right-0 w-32 h-32 bg-primary-200 rounded-full -mr-16 -mt-16 opacity-30"></div>
             <div class="relative">
               <div class="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 relative">

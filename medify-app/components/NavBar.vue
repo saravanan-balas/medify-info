@@ -1,13 +1,13 @@
 <template>
-  <nav class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="bg-teal-700 shadow-md sticky top-0 z-50">
     <div class="container-custom">
       <div class="flex justify-between items-center h-16 gap-4">
         <div class="flex items-center flex-shrink-0">
           <NuxtLink to="/" class="flex items-center space-x-2">
-            <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
-            <span class="text-xl font-bold text-gray-800">Medify.info</span>
+            <span class="text-xl font-bold text-white">Medify.info</span>
           </NuxtLink>
         </div>
 
@@ -15,7 +15,7 @@
         <div class="md:hidden flex items-center space-x-2">
           <button 
             @click="mobileSearchOpen = !mobileSearchOpen"
-            class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
+            class="p-2 rounded-md text-white hover:text-gray-200 hover:bg-teal-800 focus:outline-none"
             aria-label="Search"
           >
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +115,7 @@
         </div>
 
         <div class="md:hidden">
-          <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none">
+          <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 rounded-md text-white hover:text-gray-200 hover:bg-teal-800 focus:outline-none">
             <svg v-if="!mobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -135,7 +135,7 @@
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-1"
       >
-        <div v-if="mobileSearchOpen" class="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t border-gray-200 p-4 z-40">
+        <div v-if="mobileSearchOpen" class="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg border-t border-teal-600 p-4 z-40">
           <div class="relative">
             <input
               ref="mobileSearchInput"
@@ -214,7 +214,7 @@
       </transition>
 
       <div v-if="mobileMenuOpen" class="md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1 border-t border-teal-500">
           <NuxtLink to="/" class="mobile-nav-link" @click="mobileMenuOpen = false">Home</NuxtLink>
           <NuxtLink to="/symptoms" class="mobile-nav-link" @click="mobileMenuOpen = false">Common Conditions</NuxtLink>
           <NuxtLink to="/interviews" class="mobile-nav-link" @click="mobileMenuOpen = false">Interviews</NuxtLink>
@@ -487,19 +487,19 @@ watch(desktopSuggestions, () => {
 
 <style scoped>
 .nav-link {
-  @apply text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200;
+  @apply text-white hover:text-teal-100 px-3 py-2 text-sm font-medium transition-colors duration-200;
 }
 
 .nav-link.router-link-active {
-  @apply text-primary-600 font-semibold;
+  @apply text-teal-100 font-semibold bg-teal-800 rounded-md;
 }
 
 .mobile-nav-link {
-  @apply block text-gray-700 hover:text-primary-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium;
+  @apply block text-white hover:text-teal-100 hover:bg-teal-800 px-3 py-2 rounded-md text-base font-medium;
 }
 
 .mobile-nav-link.router-link-active {
-  @apply text-primary-600 bg-primary-50 font-semibold;
+  @apply text-teal-100 bg-teal-800 font-semibold;
 }
 
 .search-button {

@@ -27,6 +27,6 @@ defineProps<Props>()
 
 <style scoped>
 .system-card {
-  @apply bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200 border border-gray-200 hover:border-primary-300;
+  @apply bg-gradient-to-br from-white to-primary-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200 border border-primary-100 hover:border-primary-300;
 }
 </style>
